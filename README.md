@@ -1,7 +1,7 @@
 # shibby64.github.io
 
-Ethan's best practices:
+Releasing a version:
 
-1. Use "dev" branch for active development
-2. Merge into "master" when a milestone is completed
-3. Only run "npm run deploy" from "master" branch
+1. Create PR and merge into "master" branch
+2. Github actions should auto-deploy the changes pushed to master
+3. Create a release tag on the merge commit
