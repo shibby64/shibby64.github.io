@@ -1,19 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from "react-dom/client";
+import RouteWrapper from "./RouteWrapper";
+import { BrowserRouter } from "react-router";
+import Navbar from "./components/nav/Navbar";
+import "./static/styles/App.css";
+import Footer from "./components/footer/Footer";
 
+// Shouldn't need to touch this file unless you want to change the entry point
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <div className="site-wrapper">
+    <BrowserRouter>
+      <Navbar />
+      <RouteWrapper />
+      <Footer />
+    </BrowserRouter>
+  </div>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
