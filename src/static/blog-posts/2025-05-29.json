@@ -1,6 +1,0 @@
-{
-  "title": "Understanding the Basics of React Hooks",
-  "date": "2025-05-29",
-  "author": "Jane Doe",
-  "body": "React Hooks are functions that let you use state and other React features without writing a class. They were introduced in React 16.8 and have since become a fundamental part of React development. In this post, we will explore the most commonly used hooks: useState, useEffect, and custom hooks. We'll also discuss how to manage side effects and lifecycle methods using these hooks. By the end of this post, you should have a solid understanding of how to use React Hooks effectively in your applications."
-}

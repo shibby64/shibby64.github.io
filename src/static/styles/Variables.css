@@ -1,0 +1,24 @@
+:root {
+  --viewport-large-breakpoint: 1000px;
+  --viewport-medium-breakpoint: 640px;
+  --viewport-small-breakpoint: 0px;
+
+  --dark-blue: #0d1b2a;
+  --medium-blue: #1b263b;
+  --regular-blue: #415a77;
+  --light-blue: #778da9;
+  --off-white: #e0e1dd;
+
+  --text-small: 12px;
+  --text-medium: 18px;
+  --text-large: 24px;
+  --text-xlarge: 30px;
+  --text-title: 48px;
+
+  --spacing-small: 6px;
+  --spacing-medium: 12px;
+  --spacing-large: 24px;
+  --spacing-xlarge: 48px;
+  
+  --border-radius: 6px;
+}

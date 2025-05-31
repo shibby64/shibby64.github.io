@@ -1,6 +1,7 @@
 import React from "react";
 import Home from "./Home/Home";
 import Blog from "./Blog/Blog";
+import About from "./About/About";
 
 type Route = {
   label: string;
@@ -11,6 +12,7 @@ type Route = {
 const RouteList: Route[] = [
   { label: "Home", route: "/", component: <Home /> },
   { label: "Blog", route: "/blog", component: <Blog /> },
+  { label: "About", route: "/about", component: <About /> },
 ];
 
 export default RouteList;
