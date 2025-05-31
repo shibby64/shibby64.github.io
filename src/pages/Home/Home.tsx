@@ -3,9 +3,11 @@ import React from "react";
 const Home: React.FC = () => {
   return (
     <>
-      <div className="title">Welcome to Shibby64's Homepage</div>
-      <section>placeholder text :)</section>
-      <p>this will appear if the build job runs successfully</p>
+      <div className="text-title">Welcome to my site!</div>
+      <section className="content-box" id="explanation">
+        <div className="text-section-header header">Why am I here? What is this about?</div>
+        <div className="text-body body"></div>
+      </section>
     </>
   );
 };

@@ -2,8 +2,10 @@ import ReactDOM from "react-dom/client";
 import RouteWrapper from "./RouteWrapper";
 import { BrowserRouter } from "react-router";
 import Navbar from "./components/nav/Navbar";
-import "./static/styles/App.css";
 import Footer from "./components/footer/Footer";
+import "./static/styles/App.css";
+import "./static/styles/Variables.css";
+import "./static/styles/Viewport.css";
 
 // Shouldn't need to touch this file unless you want to change the entry point
 const root = ReactDOM.createRoot(
