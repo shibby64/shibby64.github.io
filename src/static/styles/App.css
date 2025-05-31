@@ -1,7 +1,7 @@
 body {
   background-color: var(--medium-blue);
   color: var(--off-white);
-  font-family: 'FallingSky', sans-serif;
+  font-family: sans-serif;
   padding: 0;
   margin: 0;
 }
