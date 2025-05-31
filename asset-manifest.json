@@ -1,13 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.dd643bda.css",
-    "main.js": "/static/js/main.0d5195b6.js",
+    "main.css": "/static/css/main.073d33b7.css",
+    "main.js": "/static/js/main.febb1517.js",
+    "static/media/FallingSkyBold-zemL.otf": "/static/media/FallingSkyBold-zemL.3e97c27eef4d26cf634f.otf",
+    "static/media/FallingSkyBoldOblique-5zmv.otf": "/static/media/FallingSkyBoldOblique-5zmv.16c676d7593ae46b4d01.otf",
+    "static/media/FallingSkyExtrabold-redB.otf": "/static/media/FallingSkyExtrabold-redB.c41bf38f2a836d96f347.otf",
+    "static/media/FallingSkyExtraboldOblique-MwdP.otf": "/static/media/FallingSkyExtraboldOblique-MwdP.d042d210c88d074435c4.otf",
+    "static/media/FallingSkySemibold-Bn7B.otf": "/static/media/FallingSkySemibold-Bn7B.2401cdfaf7b85239511b.otf",
+    "static/media/FallingSkySemiboldOblique-8q7M.otf": "/static/media/FallingSkySemiboldOblique-8q7M.a7dc2255237555014e65.otf",
+    "static/media/FallingSkyMedium-ved9.otf": "/static/media/FallingSkyMedium-ved9.55827e3e1d515682e9fa.otf",
+    "static/media/FallingSkyMediumOblique-leLD.otf": "/static/media/FallingSkyMediumOblique-leLD.aaab89b373fa6ed7f9ed.otf",
+    "static/media/FallingSkyLight-K2EX.otf": "/static/media/FallingSkyLight-K2EX.e8b0aae34f23efc5ea19.otf",
+    "static/media/FallingSkyLightOblique-2q3o.otf": "/static/media/FallingSkyLightOblique-2q3o.01e1298f339463d838bf.otf",
+    "static/media/FallingSky-JKwK.otf": "/static/media/FallingSky-JKwK.c36977b07febccf2818f.otf",
+    "static/media/FallingSkyOblique-n5XV.otf": "/static/media/FallingSkyOblique-n5XV.5ec1c3ba18fd187bc587.otf",
     "index.html": "/index.html",
-    "main.dd643bda.css.map": "/static/css/main.dd643bda.css.map",
-    "main.0d5195b6.js.map": "/static/js/main.0d5195b6.js.map"
+    "main.073d33b7.css.map": "/static/css/main.073d33b7.css.map",
+    "main.febb1517.js.map": "/static/js/main.febb1517.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd643bda.css",
-    "static/js/main.0d5195b6.js"
+    "static/css/main.073d33b7.css",
+    "static/js/main.febb1517.js"
   ]
 }
