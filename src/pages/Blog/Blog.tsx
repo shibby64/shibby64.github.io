@@ -1,18 +1,25 @@
 import React from "react";
-import * as All from "./BlogPosts";
+import postsIndex from "../../blog_posts/index.json";
+import BlogPostWrapper from "./components/PostWrapper";
+
+const MAX_POSTS_TO_SHOW = 10; // Limit the number of posts shown
 
 const Blog: React.FC = () => {
-  console.log(Object.keys(All));
   return (
     <div>
       <div className="text-title title">Blog</div>
       {
-        /* Render all blog posts */
-        Object.keys(All)
-          .sort((a, b) => b.localeCompare(a))
-          .map((key) => {
-            const BlogPostComponent = All[key as keyof typeof All];
-            return <BlogPostComponent key={key} />;
+        /* Render the blog post list */
+        postsIndex.posts
+          .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+          .map((post, idx) => {
+            if (idx >= MAX_POSTS_TO_SHOW) return null; // Limit the number of posts shown
+            const postContent = require(`../../blog_posts/posts/${post.filename}`);
+            return (
+              <BlogPostWrapper title={post.title} path={post.slug} key={post.slug}>
+                <postContent.default />
+              </BlogPostWrapper>
+            );
           })
       }
     </div>

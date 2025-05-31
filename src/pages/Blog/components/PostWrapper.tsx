@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 
-interface BlogPostWrapperProps {
+interface PostWrapperProps {
   title: string;
+  path: string;
   expandedByDefault?: boolean;
   children: React.ReactNode;
 }
 
-const BlogPostWrapper: React.FC<BlogPostWrapperProps> = ({ title, children, expandedByDefault = false }) => {
+const PostWrapper: React.FC<PostWrapperProps> = ({ title, path, expandedByDefault = false, children }) => {
   const [isExpanded, setIsExpanded] = useState(expandedByDefault);
 
   const toggleExpand = () => {
@@ -25,4 +26,4 @@ const BlogPostWrapper: React.FC<BlogPostWrapperProps> = ({ title, children, expa
   );
 };
 
-export default BlogPostWrapper;
+export default PostWrapper;
