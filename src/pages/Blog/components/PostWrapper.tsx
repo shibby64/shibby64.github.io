@@ -15,7 +15,7 @@ const PostWrapper: React.FC<PostWrapperProps> = ({ title, path, expandedByDefaul
   };
 
   return (
-    <article className="post-container drop-shadow">
+    <article className="card">
       <div className="header">
         {title} <button onClick={toggleExpand}>Show/hide</button>
       </div>
