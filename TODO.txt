@@ -1,2 +1,4 @@
 1. Add generic pagination control
 2. Add generic search/filter control
+3. Remove MDX and react audio player packages
+4. New TTF font??
