@@ -1,5 +1,5 @@
 body {
-  background-color: var(--medium-blue);
+  background-color: var(--blue-2);
   color: var(--off-white);
   font-family: sans-serif;
   padding: 0;
@@ -7,7 +7,7 @@ body {
 }
 
 nav {
-  background-color: var(--medium-blue);
+  background-color: var(--blue-2);
   border-bottom: 1px solid var(--off-white);
   ul {
     height: var(--spacing-xlarge);
@@ -56,7 +56,7 @@ nav {
 main {
   padding-top: var(--spacing-medium);
   padding-bottom: var(--spacing-medium);
-  background-color: var(--medium-blue);
+  background-color: var(--blue-0);
   flex: 1 0 0;
   
   .title {
@@ -65,30 +65,74 @@ main {
   
   .content-row {
     display: flex;
+    /* justify-content: space-around; */
     flex-wrap: wrap;
     gap: var(--spacing-large);
+    margin-bottom: var(--spacing-medium);
+    &.two-column {
+      > * {
+        flex: 1 1 45%;
+        min-width: 300px;
+      }
+    }
+  }
+  
+  a {
+    color: var(--off-white);
+    text-decoration: none;
+    background-color: var(--blue-6);
+    padding: 1px 2px;
+    text-wrap: nowrap;
+    border-radius: var(--border-radius);
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
 .tile {
-  background-color: var(--regular-blue);
+  background-color: var(--blue-2);
   padding: var(--spacing-large);
   border-radius: var(--border-radius);
+  box-shadow: var(--spacing-small) var(--spacing-small) var(--spacing-small) rgba(0, 0, 0, 0.2);
+
 }
 
 .card {
   border-left: 3px solid var(--off-white);
   border-radius: var(--border-radius);
   box-shadow: var(--spacing-small) var(--spacing-small) var(--spacing-small) rgba(0, 0, 0, 0.2);
+  width: 100%;
+
+  
   .header {
-    background-color: var(--dark-blue);
+    background-color: var(--blue-2);
     padding: var(--spacing-medium);
     border-top-right-radius: var(--border-radius);
   }
   .content {
-    background-color: var(--regular-blue);
+    background-color: var(--blue-4);
     padding: var(--spacing-medium);
     border-bottom-right-radius: var(--border-radius);
+  }
+}
+
+.btn {
+
+  padding: var(--spacing-small) var(--spacing-medium);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: var(--text-medium);
+  font-weight: bold;
+  
+  &.primary {
+    background-color: var(--off-white);
+    color: var(--blue-2);
+  }
+  
+  &:hover {
+    background-color: var(--blue-8);
   }
 }
 
@@ -107,7 +151,7 @@ article {
 }
 
 footer {
-  background-color: var(--dark-blue);
+  background-color: var(--blue-0);
   color: var(--off-white);
   text-align: center;
   padding: var(--spacing-medium) 0;

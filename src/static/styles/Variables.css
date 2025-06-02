@@ -2,12 +2,27 @@
   --viewport-large-breakpoint: 1000px;
   --viewport-medium-breakpoint: 640px;
   --viewport-small-breakpoint: 0px;
+  
+  --off-white: #DADDDC;
+  --off-black: #0C0F1D;
+  
+  --earth-dark: #3a5a40;
+  --earth-medium: #588157;
+  --earth-bright: #a3b18a;
+  
+  --wind-dark: #386fa4;
+  --wind-medium: #59a5d8;
+  --wind-bright: #84d2f6;
+  
+  --fire-dark: #6a040f;
+  --fire-medium: #9d0208;
+  --fire-bright: #d00000;
 
-  --dark-blue: #0d1b2a;
-  --medium-blue: #1b263b;
-  --regular-blue: #415a77;
-  --light-blue: #778da9;
-  --off-white: #e0e1dd;
+  --blue-0: #0F1629;
+  --blue-2: #191F3D;
+  --blue-4: #374981;
+  --blue-6: #6376BA;
+  --blue-8: #9DAAD2;
 
   --text-small: 12px;
   --text-medium: 18px;
@@ -21,4 +36,5 @@
   --spacing-xlarge: 48px;
   
   --border-radius: 6px;
+  
 }

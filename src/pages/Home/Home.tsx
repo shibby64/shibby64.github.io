@@ -1,16 +1,21 @@
 import React from "react";
+import Tile from "../../components/containers/Tile";
+import LinkButton from "../../components/buttons/LinkButton";
 
 const Home: React.FC = () => {
   return (
     <>
-      <section>
-        <div className="text-title title">Home page</div>
-      </section>
       <section className="content-row">
-        <div className="card" id="explanation">
-          <div className="text-section-header header">Welcome to my site!</div>
-          <div className="text-body content">There isn't much here yet, but feel free to check out my blog!</div>
-        </div>
+        <Tile headerText="Welcome!" className="card">
+          <div>
+            There isn't much here yet, but feel free to check out my blog!
+            <div style={{ display: "flex", justifyContent: "center", marginTop: "1rem" }}>
+              <LinkButton className="primary" linkTo="/blog">
+                Visit blog
+              </LinkButton>
+            </div>
+          </div>
+        </Tile>
       </section>
     </>
   );

@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom/client";
 import RouteWrapper from "./RouteWrapper";
-import { BrowserRouter } from "react-router";
+import { HashRouter } from "react-router";
 import Navbar from "./components/nav/Navbar";
 import Footer from "./components/footer/Footer";
 import "./static/styles/App.css";
@@ -12,10 +12,10 @@ import "./static/styles/Viewport.css";
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
   <div className="site-wrapper">
-    <BrowserRouter>
+    <HashRouter>
       <Navbar />
       <RouteWrapper />
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   </div>
 );
