@@ -18,7 +18,11 @@ const About: React.FC = () => {
           you scrolling, clicking, and engaging with their content. Their platforms are designed with addictive
           algorithms, crammed with as many advertisements as they can get away with, and are slowly filling with AI
           slop. The {}
-          <a href="https://en.wikipedia.org/wiki/Dead_Internet_theory" target="_blank" rel="noreferrer">
+          <a
+            className="emphasized"
+            href="https://en.wikipedia.org/wiki/Dead_Internet_theory"
+            target="_blank"
+            rel="noreferrer">
             dead internet theory
           </a>{" "}
           {}

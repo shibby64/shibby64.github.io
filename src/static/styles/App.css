@@ -1,5 +1,4 @@
 body {
-  background-color: var(--blue-2);
   color: var(--off-white);
   font-family: sans-serif;
   padding: 0;
@@ -7,8 +6,8 @@ body {
 }
 
 nav {
-  background-color: var(--blue-2);
-  border-bottom: 1px solid var(--off-white);
+  background-color: var(--earth-darkest);
+  border-bottom: 1px solid var(--earth-light);
   ul {
     height: var(--spacing-xlarge);
     align-items: center;
@@ -39,16 +38,22 @@ nav {
 
 .text-title {
   font-size: var(--text-title);
+    line-height: calc(var(--text-title) + var(--spacing-small));
+
   font-weight: 800;
 }
 
 .text-section-header {
   font-size: var(--text-xlarge);
+    line-height: calc(var(--text-xlarge) + var(--spacing-small));
+
   font-weight: bold;
 }
 
 .text-body {
   font-size: var(--text-medium);
+  line-height: calc(var(--text-medium) + var(--spacing-small));
+
   font-weight: 300;
 }
 
@@ -56,7 +61,7 @@ nav {
 main {
   padding-top: var(--spacing-medium);
   padding-bottom: var(--spacing-medium);
-  background-color: var(--blue-0);
+  background-color: var(--off-black);
   flex: 1 0 0;
   
   .title {
@@ -78,12 +83,16 @@ main {
   }
   
   a {
-    color: var(--off-white);
     text-decoration: none;
-    background-color: var(--blue-6);
-    padding: 1px 2px;
-    text-wrap: nowrap;
-    border-radius: var(--border-radius);
+    color: var(--off-white);
+
+    &.emphasized {
+      background-color: var(--earth-lightest);
+      padding: 2px 3px;
+      text-wrap: nowrap;
+      border-radius: 2px;
+    }
+
     &:hover {
       text-decoration: underline;
     }
@@ -91,7 +100,7 @@ main {
 }
 
 .tile {
-  background-color: var(--blue-2);
+  background-color: var(--earth-darker);
   padding: var(--spacing-large);
   border-radius: var(--border-radius);
   box-shadow: var(--spacing-small) var(--spacing-small) var(--spacing-small) rgba(0, 0, 0, 0.2);
@@ -99,41 +108,43 @@ main {
 }
 
 .card {
-  border-left: 3px solid var(--off-white);
+  border-left: 3px solid var(--earth-lighter);
   border-radius: var(--border-radius);
   box-shadow: var(--spacing-small) var(--spacing-small) var(--spacing-small) rgba(0, 0, 0, 0.2);
   width: 100%;
 
   
   .header {
-    background-color: var(--blue-2);
+    background-color: var(--earth-darkest);
     padding: var(--spacing-medium);
     border-top-right-radius: var(--border-radius);
   }
   .content {
-    background-color: var(--blue-4);
+    background-color: var(--earth-darker);
     padding: var(--spacing-medium);
     border-bottom-right-radius: var(--border-radius);
   }
 }
 
 .btn {
-
+  box-shadow: var(--spacing-small) var(--spacing-small) var(--spacing-small) rgba(0, 0, 0, 0.2);
   padding: var(--spacing-small) var(--spacing-medium);
-  border: none;
   border-radius: var(--border-radius);
   cursor: pointer;
   font-size: var(--text-medium);
   font-weight: bold;
+  border: none;
   
   &.primary {
-    background-color: var(--off-white);
-    color: var(--blue-2);
+    background-color: var(--earth-lighter);
+    color: var(--off-white);
+    
+    &:hover {
+      background-color: var(--earth-lightest);
+    }
   }
   
-  &:hover {
-    background-color: var(--blue-8);
-  }
+
 }
 
 article {
@@ -151,7 +162,7 @@ article {
 }
 
 footer {
-  background-color: var(--blue-0);
+  background-color: var(--earth-darkest);
   color: var(--off-white);
   text-align: center;
   padding: var(--spacing-medium) 0;
