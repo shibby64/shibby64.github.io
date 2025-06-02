@@ -13,6 +13,7 @@ const RouteList: Route[] = [
   { label: "Home", route: "/", component: <Home /> },
   { label: "Blog", route: "/blog", component: <Blog /> },
   { label: "About", route: "/about", component: <About /> },
+  //  { label: "Test", route: "/test", component: <TestPage /> },
 ];
 
 export default RouteList;

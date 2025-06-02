@@ -3,25 +3,47 @@
   --viewport-medium-breakpoint: 640px;
   --viewport-small-breakpoint: 0px;
   
-  --off-white: #EFFBEF;
-  --off-black: #080F06;
-  
-  --earth-darkest: #10210C;
-  --earth-darker: #112909;
-  --earth-dark: #16350C;
-  --earth-light: #1B410E;
-  --earth-lighter: #1F4D11;
-  --earth-lightest: #265B15;
-  
-  --fire-dark: #D40C0C;
-  --fire-light: #F11111;
+  --white: #F4F6F3;
+  --grey-100: #BABCB9;
+  --grey-80: #7F817E;
+  --grey-60: #444744;
+  --grey-40: #272A27;
+  --grey-20: #181B18;
+  --black: #090C09;
 
-  --blue-0: #0F1629;
-  --blue-2: #191F3D;
-  --blue-4: #374981;
-  --blue-6: #6376BA;
-  --blue-8: #9DAAD2;
+  --earth-dark: #1F3E13; /* button */
+  --earth-mid: #2D5D1D; /* button */
+  --earth-light: #387224; /* button */
+  
+  --fire-dark: #610505;
+  --fire-mid: #880707;
+  --fire-light: #AE0909;
+  
+  /* Site-wide colors */
+  --page-background-primary: var(--black);
+  --page-background-secondary: var(--grey-20);
+  
+  --page-text-primary: var(--white);
+  
+  /* Container colors */
+  --container-primary: var(--grey-40);
+  --container-secondary: var(--grey-20);
+  --container-accent: var(--earth-mid);
+  
+  /* Button colors */
+  --button-primary-solid: var(--earth-light);
+  --button-primary-hover: var(--earth-mid);
+  --button-primary-active: var(--earth-dark);
+  
+  --button-secondary-solid: var(--white);
+  --button-secondary-hover: var(--grey-100);
+  --button-secondary-active: var(--grey-80);
+  
+  --button-warning-solid: var(--fire-light);
+  --button-warning-hover: var(--fire-mid);
+  --button-warning-active: var(--fire-dark);
 
+  /* Text sizes */
   --text-small: 12px;
   --text-medium: 18px;
   --text-large: 24px;
