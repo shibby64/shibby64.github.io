@@ -6,8 +6,9 @@ const Home: React.FC = () => {
   return (
     <>
       <section className="content-row">
-        <Tile headerText="Welcome!">
-          <div>
+        <Tile>
+          <div className="text-section-header">Welcome!</div>
+          <div className="text-body">
             There isn't much here yet, but feel free to check out my blog!
             <div style={{ display: "flex", justifyContent: "center", marginTop: "1rem" }}>
               <LinkButton className="primary" linkTo="/blog">

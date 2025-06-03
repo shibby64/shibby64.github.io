@@ -1,17 +1,16 @@
 import React from "react";
 
 interface TileProps {
-  headerText?: string;
   children?: React.ReactNode;
   className?: string;
   style?: React.CSSProperties;
+  id?: string;
 }
 
-const Tile: React.FC<TileProps> = ({ headerText, children, className = "", style }) => {
+const Tile: React.FC<TileProps> = ({ children, className = "", style, id }) => {
   return (
-    <div className={`tile ${className}`} id="explanation" style={style}>
-      <div className="text-section-header">{headerText}</div>
-      <div className="text-body">{children}</div>
+    <div className={`tile ${className}`} id={id} style={style}>
+      {children}
     </div>
   );
 };

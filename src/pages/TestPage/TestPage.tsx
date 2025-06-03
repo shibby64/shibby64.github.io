@@ -1,50 +1,44 @@
 import React from "react";
 import Tile from "../../components/containers/Tile";
 import LinkButton from "../../components/buttons/LinkButton";
+import Card from "../../components/containers/Card";
 
 const TestPage: React.FC = () => {
   return (
-    <div>
-      <Tile headerText="Welcome!">
+    <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+      <Tile>
         <div>
-          There isn't much here yet, but feel free to check out my blog!
-          <div style={{ display: "flex", justifyContent: "center", marginTop: "1rem" }}>
-            <LinkButton className="primary" linkTo="/blog">
-              Take me there
+          This is a test tile component.{" "}
+          <a className="emphasized" href="#">
+            This is an emphasized link
+          </a>
+          <div style={{ display: "flex", justifyContent: "center", marginTop: "1rem", gap: "1rem" }}>
+            <LinkButton className="primary" linkTo="/test">
+              Primary button
+            </LinkButton>
+            <LinkButton className="secondary" linkTo="/test">
+              Secondary button
+            </LinkButton>
+            <LinkButton className="warning" linkTo="/test">
+              Warning button
             </LinkButton>
           </div>
         </div>
       </Tile>
-      <div style={{ padding: "10px" }} />
 
-      <div className="card" id="about-me">
-        <div className="text-section-header header">Why did I create this?</div>
-        <div className="text-body content">
-          The internet is not what i remember it being. Instead of being a place for benefit of the user, it's becoming
-          a place for the benefit of the corporation. Companies like Meta, Twitter, and others will do anything to keep
-          you scrolling, clicking, and engaging with their content. Their platforms are designed with addictive
-          algorithms, crammed with as many advertisements as they can get away with, and are slowly filling with AI
-          slop. The {}
-          <a
-            className="emphasized"
-            href="https://en.wikipedia.org/wiki/Dead_Internet_theory"
-            target="_blank"
-            rel="noreferrer">
-            dead internet theory
-          </a>{" "}
-          {}
-          is alive and well. {}
-          <b>I do not wish to engage with this "new internet" and have been working to unplug myself.</b>
+      <Card headerText="Card - static">
+        <div>
+          This is a test card component. It is used to demonstrate the basic structure of a card component.
+          <div style={{ display: "flex", justifyContent: "center", marginTop: "1rem", gap: "1rem" }}></div>
         </div>
-      </div>
+      </Card>
 
-      <div style={{ padding: "10px" }} />
-      <LinkButton className="secondary" linkTo="/about">
-        secondary button
-      </LinkButton>
-      <LinkButton className="warning" linkTo="/about">
-        Warning button
-      </LinkButton>
+      {/* <Card headerText="Card - collapsable">
+        <div>
+          This is a test card component with collapse functionality. It is used to demonstrate the basic structure of a
+          card component with collapse functionality.
+        </div>
+      </Card> */}
     </div>
   );
 };
