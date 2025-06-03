@@ -1,6 +1,6 @@
 import React from "react";
 import postsIndex from "../../blog_posts/index.json";
-import BlogPostWrapper from "./components/PostWrapper";
+import PostWrapper from "./components/PostWrapper";
 
 const MAX_POSTS_TO_SHOW = 10; // Limit the number of posts shown
 
@@ -16,9 +16,9 @@ const Blog: React.FC = () => {
             if (idx >= MAX_POSTS_TO_SHOW) return null; // Limit the number of posts shown
             const postContent = require(`../../blog_posts/posts/${post.filename}`);
             return (
-              <BlogPostWrapper title={post.title} path={post.slug} key={post.slug}>
+              <PostWrapper title={post.title} path={post.slug} key={post.slug}>
                 <postContent.default />
-              </BlogPostWrapper>
+              </PostWrapper>
             );
           })
       }
