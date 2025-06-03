@@ -9,7 +9,7 @@ const TestPage: React.FC = () => {
       <Tile>
         <div>
           This is a test tile component.{" "}
-          <a className="emphasized" href="#">
+          <a className="emphasized" href="/test">
             This is an emphasized link
           </a>
           <div style={{ display: "flex", justifyContent: "center", marginTop: "1rem", gap: "1rem" }}>
