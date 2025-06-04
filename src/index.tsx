@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom/client";
-import RouteWrapper from "./RouteWrapper";
+import RouteWrapper from "./lib/RouteWrapper";
 import { HashRouter } from "react-router";
 import Navbar from "./components/nav/Navbar";
 import Footer from "./components/footer/Footer";
