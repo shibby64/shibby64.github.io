@@ -8,7 +8,7 @@ body {
 nav {
   background-color: var(--page-background-primary);
   border-bottom: 1px solid var(--page-background-secondary);
-  ul {
+  .nav-list {
     align-items: center;
     list-style: none;
     padding: 0;
@@ -17,13 +17,10 @@ nav {
     gap: 20px;
     flex-wrap: wrap;
 
-    li {
+    .nav-item {
       height: var(--spacing-xlarge);
       border-bottom: 2px solid transparent;
       box-sizing: border-box;
-      /* display: flex;
-      align-items: center;
-       */
       padding-top: var(--spacing-small);
       &:has(a.active) {
         border-bottom: 3px solid var(--earth-mid);
@@ -36,6 +33,16 @@ nav {
         color: var(--page-text-primary);
         font-size: var(--text-xlarge);
         font-weight: bold;
+        text-decoration: none;
+      }
+      button {
+        background: none;
+        border: none;
+        color: var(--page-text-primary);
+        font-size: var(--text-xlarge);
+        font-weight: bold;
+        cursor: pointer;
+        padding: 0;
         text-decoration: none;
       }
     }

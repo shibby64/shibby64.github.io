@@ -6,29 +6,32 @@ import TestPage from "./TestPage/TestPage";
 import Music from "./Projects/Music/Music";
 import Photography from "./Projects/Photography/Photography";
 
-export type LeafRoute = {
+export type RouteLeaf = {
+  type: "leaf";
   label: string;
   route: string;
   component: React.ReactNode; // Optional component for direct rendering
 };
 
-export type NestedRoute = {
+export type RouteBranch = {
+  type: "nested";
   label: string;
-  children: LeafRoute[];
+  leaves: RouteLeaf[];
 };
 
-type Routes = LeafRoute | NestedRoute;
+type Routes = RouteLeaf | RouteBranch;
 
 const RouteList: Routes[] = [
-  { label: "Home", route: "/", component: <Home /> },
-  { label: "Blog", route: "/blog", component: <Blog /> },
-  { label: "About", route: "/about", component: <About /> },
-  { label: "Test", route: "/test", component: <TestPage /> },
+  { type: "leaf", label: "Home", route: "/", component: <Home /> },
+  { type: "leaf", label: "Blog", route: "/blog", component: <Blog /> },
+  { type: "leaf", label: "About", route: "/about", component: <About /> },
+  { type: "leaf", label: "Test", route: "/test", component: <TestPage /> },
   {
+    type: "nested",
     label: "Projects",
-    children: [
-      { label: "Music", route: "/music", component: <Music /> },
-      { label: "Photography", route: "/photography", component: <Photography /> },
+    leaves: [
+      { type: "leaf", label: "Music", route: "/music", component: <Music /> },
+      { type: "leaf", label: "Photography", route: "/photography", component: <Photography /> },
     ],
   },
 ];
