@@ -38,11 +38,17 @@ const NavItemDropdown: React.FC<NavItemProps> = ({ label, children }) => {
           <span className="dropdown-icon">▼</span>
         </button>
       </li>
-      <ul style={{ display: expanded ? "block" : "none" }}>
-        {children.map((leaf) => {
-          return <NavItem key={leaf.label} route={leaf.route} label={leaf.label} onClick={() => setExpanded(false)} />;
-        })}
-      </ul>
+      <div>
+        <div className={`children transition-wrapper ${expanded ? "" : "collapsed"}`}>
+          <ul>
+            {children.map((leaf) => {
+              return (
+                <NavItem key={leaf.label} route={leaf.route} label={leaf.label} onClick={() => setExpanded(false)} />
+              );
+            })}
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };
