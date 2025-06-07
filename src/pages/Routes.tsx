@@ -24,8 +24,6 @@ type Routes = RouteLeaf | RouteBranch;
 const RouteList: Routes[] = [
   { type: "leaf", label: "Home", route: "/", component: <Home /> },
   { type: "leaf", label: "Blog", route: "/blog", component: <Blog /> },
-  { type: "leaf", label: "About", route: "/about", component: <About /> },
-  { type: "leaf", label: "Test", route: "/test", component: <TestPage /> },
   {
     type: "nested",
     label: "Projects",
@@ -34,6 +32,8 @@ const RouteList: Routes[] = [
       { type: "leaf", label: "Photography", route: "/photography", component: <Photography /> },
     ],
   },
+  { type: "leaf", label: "About", route: "/about", component: <About /> },
+  { type: "leaf", label: "Test", route: "/test", component: <TestPage /> },
 ];
 
 export default RouteList;

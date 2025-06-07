@@ -4,12 +4,15 @@ import { NavLink } from "react-router";
 export interface NavItemProps {
   label: string;
   route: string;
+  onClick?: () => void;
 }
 
-const NavItem: React.FC<NavItemProps> = ({ label, route }) => {
+const NavItem: React.FC<NavItemProps> = ({ label, route, onClick }) => {
   return (
     <li className="nav-item">
-      <NavLink to={route}>{label}</NavLink>
+      <NavLink to={route} onClick={onClick}>
+        {label}
+      </NavLink>
     </li>
   );
 };
