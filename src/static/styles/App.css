@@ -6,7 +6,7 @@ body {
 }
 
 nav {
-  background-color: var(--page-background-secondary);
+  background-color: var(--page-background-primary);
   border-bottom: 2px solid var(--container-accent);
 
   ul {
@@ -18,7 +18,6 @@ nav {
   .nav-list {
     display: flex;
     flex-wrap: wrap;
-    /* padding: var(--spacing-small); */
     
     /* nav item that is a singular route */
     .nav-item {
@@ -49,15 +48,15 @@ nav {
         }
         
         &.open {
-          background-color: var(--button-nav-active);
+          background-color: var(--page-background-secondary);
         }
         
         &:hover {
-          background-color: var(--button-nav-hover);
+          background-color: var(--button-nav-hover) !important;
         }
         
         &:active {
-          background-color: var(--button-nav-active);
+          background-color: var(--button-nav-active) !important;
         }
       }
     }
@@ -67,12 +66,18 @@ nav {
       display: flex;
       flex-direction: column;
       
+      &:has(a.active) {
+        button {
+          background-color: var(--button-nav-active);
+        }
+      }
+      
       .dropdown-icon {
         margin-left: var(--spacing-small);
       }
-      .children {
+      
+      .content {
         position: absolute;
-
       }
       
       ul {
@@ -242,8 +247,6 @@ main {
 
 article {
   margin-bottom: var(--spacing-medium);
-  
-
 }
 
 footer {

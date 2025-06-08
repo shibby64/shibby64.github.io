@@ -8,7 +8,7 @@ export interface NavItemProps {
 }
 
 const NavItemDropdown: React.FC<NavItemProps> = ({ label, children }) => {
-  const [expanded, setExpanded] = useState(true);
+  const [expanded, setExpanded] = useState(false);
 
   const toggleExpanded = () => {
     setExpanded(!expanded);
@@ -39,8 +39,8 @@ const NavItemDropdown: React.FC<NavItemProps> = ({ label, children }) => {
         </button>
       </li>
       <div>
-        <div className={`children transition-wrapper ${expanded ? "" : "collapsed"}`}>
-          <ul>
+        <div className={`content transition-wrapper ${expanded ? "" : "collapsed"}`}>
+          <ul className="child-routes">
             {children.map((leaf) => {
               return (
                 <NavItem key={leaf.label} route={leaf.route} label={leaf.label} onClick={() => setExpanded(false)} />
