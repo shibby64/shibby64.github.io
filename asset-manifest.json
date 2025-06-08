@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.eb201513.css",
-    "main.js": "/static/js/main.9abc1b34.js",
+    "main.css": "/static/css/main.335b4b04.css",
+    "main.js": "/static/js/main.3848d486.js",
     "static/media/FallingSkyBold-zemL.otf": "/static/media/FallingSkyBold-zemL.3e97c27eef4d26cf634f.otf",
     "static/media/FallingSkyBoldOblique-5zmv.otf": "/static/media/FallingSkyBoldOblique-5zmv.16c676d7593ae46b4d01.otf",
     "static/media/FallingSkyExtrabold-redB.otf": "/static/media/FallingSkyExtrabold-redB.c41bf38f2a836d96f347.otf",
@@ -15,11 +15,11 @@
     "static/media/FallingSky-JKwK.otf": "/static/media/FallingSky-JKwK.c36977b07febccf2818f.otf",
     "static/media/FallingSkyOblique-n5XV.otf": "/static/media/FallingSkyOblique-n5XV.5ec1c3ba18fd187bc587.otf",
     "index.html": "/index.html",
-    "main.eb201513.css.map": "/static/css/main.eb201513.css.map",
-    "main.9abc1b34.js.map": "/static/js/main.9abc1b34.js.map"
+    "main.335b4b04.css.map": "/static/css/main.335b4b04.css.map",
+    "main.3848d486.js.map": "/static/js/main.3848d486.js.map"
   },
   "entrypoints": [
-    "static/css/main.eb201513.css",
-    "static/js/main.9abc1b34.js"
+    "static/css/main.335b4b04.css",
+    "static/js/main.3848d486.js"
   ]
 }
