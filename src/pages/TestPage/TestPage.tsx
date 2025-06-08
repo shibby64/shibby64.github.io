@@ -13,17 +13,21 @@ const TestPage: React.FC = () => {
             This is an emphasized link
           </a>
           <div style={{ display: "flex", justifyContent: "center", marginTop: "1rem", gap: "1rem" }}>
-            <LinkButton className="primary" linkTo="/test">
+            <LinkButton buttonClass="primary" linkTo="/test">
               Primary button
             </LinkButton>
-            <LinkButton className="secondary" linkTo="/test">
+            <LinkButton buttonClass="secondary" linkTo="/test">
               Secondary button
             </LinkButton>
-            <LinkButton className="warning" linkTo="/test">
+            <LinkButton buttonClass="warning" linkTo="/test">
               Warning button
             </LinkButton>
           </div>
         </div>
+      </Tile>
+
+      <Tile showAccentBar>
+        <div>This is a test tile component with an accent bar.</div>
       </Tile>
 
       <Card headerText="Card - static">

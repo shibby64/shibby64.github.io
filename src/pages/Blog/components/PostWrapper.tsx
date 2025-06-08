@@ -1,28 +1,28 @@
-import React, { useState } from "react";
+import React from "react";
+import LinkButton from "../../../components/buttons/LinkButton";
+import Tile from "../../../components/containers/Tile";
+import Text from "../../../components/Text";
+import type { postMetadata } from "../../../blog_posts/postMetadata";
 
 interface PostWrapperProps {
-  title: string;
-  path: string;
-  expandedByDefault?: boolean;
+  postMetadata: postMetadata;
+
+  // generic props
   children: React.ReactNode;
 }
 
-const PostWrapper: React.FC<PostWrapperProps> = ({ title, path, expandedByDefault = false, children }) => {
-  const [isExpanded, setIsExpanded] = useState(expandedByDefault);
-
-  const toggleExpand = () => {
-    setIsExpanded(!isExpanded);
-  };
-
+const PostWrapper: React.FC<PostWrapperProps> = (props) => {
   return (
-    <article className="card">
-      <div className="header">
-        {title} <button onClick={toggleExpand}>Show/hide</button>
-      </div>
-      <div className={`transition-wrapper ${isExpanded ? "" : "collapsed"}`}>
-        <div className="content">{children}</div>
-      </div>
-    </article>
+    <div className="blog-post">
+      <Tile showAccentBar className="header">
+        <Text textType="section-header">{props.postMetadata.title}</Text>
+        <LinkButton id="go-back" buttonClass="secondary" linkTo={"/blog"}>
+          Go Back
+        </LinkButton>
+      </Tile>
+
+      <article>{props.children}</article>
+    </div>
   );
 };
 

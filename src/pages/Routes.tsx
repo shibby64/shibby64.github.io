@@ -6,27 +6,48 @@ import TestPage from "./TestPage/TestPage";
 import Music from "./Projects/Music/Music";
 import Photography from "./Projects/Photography/Photography";
 
+import postsIndex from "../blog_posts/index.json";
+import PostWrapper from "./Blog/components/PostWrapper";
+
 export type RouteLeaf = {
   type: "leaf";
   label: string;
   route: string;
-  component: React.ReactNode; // Optional component for direct rendering
+  component: React.ReactNode;
 };
 
 export type RouteBranch = {
-  type: "nested";
+  type: "branch";
   label: string;
+  route: string;
+  component?: React.ReactNode; // if component is supplied, navbar button will take you there. Otherwise, navbar will render a dropdown
   leaves: RouteLeaf[];
 };
 
 type Routes = RouteLeaf | RouteBranch;
 
+const blogPostsToRoutes = postsIndex.posts.map((post) => {
+  const blogPostComponent = require(`../blog_posts/posts/${post.filename}`);
+  const x: RouteLeaf = {
+    type: "leaf",
+    label: post.title,
+    route: post.route,
+    component: (
+      <PostWrapper postMetadata={post}>
+        <blogPostComponent.default />
+      </PostWrapper>
+    ),
+  };
+  return x;
+});
+
 const RouteList: Routes[] = [
   { type: "leaf", label: "Home", route: "/", component: <Home /> },
-  { type: "leaf", label: "Blog", route: "/blog", component: <Blog /> },
+  { type: "branch", label: "Blog", route: "/blog", component: <Blog />, leaves: blogPostsToRoutes },
   {
-    type: "nested",
+    type: "branch",
     label: "Projects",
+    route: "/projects",
     leaves: [
       { type: "leaf", label: "Music", route: "/music", component: <Music /> },
       { type: "leaf", label: "Photography", route: "/photography", component: <Photography /> },

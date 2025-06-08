@@ -2,7 +2,7 @@
   "posts": [
     {
       "title": "My first post",
-      "slug": "my-first-post",
+      "route": "my-first-post",
       "date": "2025-05-29",
       "summary": "Test summary.",
       "tags": ["JavaScript", "Closures", "Programming"],
@@ -10,7 +10,7 @@
     },
         {
       "title": "My second post",
-      "slug": "my-second-post",
+      "route": "my-second-post",
       "date": "2025-05-30",
       "summary": "Test summary 2.",
       "tags": ["JavaScript", "Closures", "Programming"],

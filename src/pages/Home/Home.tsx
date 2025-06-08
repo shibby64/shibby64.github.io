@@ -11,7 +11,7 @@ const Home: React.FC = () => {
           <div className="text-body">
             There isn't much here yet, but feel free to check out my blog!
             <div style={{ display: "flex", justifyContent: "center", marginTop: "1rem" }}>
-              <LinkButton className="primary" linkTo="/blog">
+              <LinkButton buttonClass="primary" linkTo="/blog">
                 Take me there
               </LinkButton>
             </div>

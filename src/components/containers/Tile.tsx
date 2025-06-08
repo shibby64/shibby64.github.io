@@ -1,15 +1,16 @@
 import React from "react";
 
 interface TileProps {
-  children?: React.ReactNode;
   className?: string;
+  showAccentBar?: boolean;
+  children?: React.ReactNode;
   style?: React.CSSProperties;
   id?: string;
 }
 
-const Tile: React.FC<TileProps> = ({ children, className = "", style, id }) => {
+const Tile: React.FC<TileProps> = ({ children, showAccentBar, className = "", style, id }) => {
   return (
-    <div className={`tile ${className}`} id={id} style={style}>
+    <div className={`tile ${showAccentBar && "accentBar"} ${className}`} id={id} style={style}>
       {children}
     </div>
   );
