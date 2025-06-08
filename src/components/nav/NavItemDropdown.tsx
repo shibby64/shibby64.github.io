@@ -40,7 +40,7 @@ const NavItemDropdown: React.FC<NavItemProps> = ({ label, children }) => {
       </li>
       <div>
         <div className={`content transition-wrapper ${expanded ? "" : "collapsed"}`}>
-          <ul className="child-routes">
+          <ul className="nav-list vertical">
             {children.map((leaf) => {
               return (
                 <NavItem key={leaf.label} route={leaf.route} label={leaf.label} onClick={() => setExpanded(false)} />

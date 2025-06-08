@@ -9,88 +9,96 @@ nav {
   background-color: var(--page-background-primary);
   border-bottom: 2px solid var(--container-accent);
 
-  ul {
+  .nav-list {
     list-style: none;
     padding: 0;
     margin: 0;
-  }
-  
-  .nav-list {
     display: flex;
     flex-wrap: wrap;
     gap: var(--spacing-small);
+    &.horizontal {
+      flex-direction: row;
+    }
+    &.vertical {
+      flex-direction: column;
+    }
+
+  }
+
+  /* nav item that is a singular route */
+  .nav-item {
+    display: flex;
     
-    /* nav item that is a singular route */
-    .nav-item {
-      display: flex;
+    a, button {
+      all: unset;
       
-      a, button {
-        all: unset;
-        
-        color: var(--page-text-primary);
-        font-size: var(--text-xlarge);
-        font-weight: bold;
-        text-decoration: none;
-        padding: var(--spacing-small) var(--spacing-medium);
-        margin: var(--spacing-small) 0;
-        border-radius: var(--border-radius);
-        width: 100%;
-        
-        cursor: pointer;
-        user-select: none;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        
-        transition: background-color 0.1s ease;
-        
-        &.active {
-          background-color: var(--button-nav-solid);
-        }
-        
-        &.open {
-          background-color: var(--page-background-secondary);
-        }
-        
-        &:hover {
-          background-color: var(--button-nav-hover) !important;
-        }
-        
-        &:active {
-          background-color: var(--button-nav-active) !important;
-        }
+      color: var(--page-text-primary);
+      font-size: var(--text-xlarge);
+      font-weight: bold;
+      text-decoration: none;
+      padding: var(--spacing-small) var(--spacing-medium);
+      margin: var(--spacing-small) 0;
+      border-radius: var(--border-radius);
+      width: 100%;
+      
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      
+      transition: background-color 0.1s ease;
+      
+      &.active {
+        background-color: var(--button-nav-solid);
+      }
+      
+      &.open {
+        background-color: var(--page-background-secondary);
+      }
+      
+      &:hover {
+        background-color: var(--button-nav-hover) !important;
+      }
+      
+      &:active {
+        background-color: var(--button-nav-active) !important;
+      }
+    }
+  }
+  
+  /* nav item that contains multiple routes */
+  .nav-dropdown {
+    display: flex;
+    flex-direction: column;
+  
+    &:has(a.active) {
+      button {
+        background-color: var(--button-nav-active);
       }
     }
     
-    /* nav item that contains multiple routes */
-    .nav-dropdown {
-      display: flex;
+    .dropdown-icon {
+      margin-left: var(--spacing-small);
+    }
+    
+    .content {
+      position: absolute;
+    }
+    
+    .nav-list {
+      background-color: var(--page-background-secondary);
+      border-radius: var(--border-radius);
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;     
+      border: 2px solid var(--container-accent);
+      border-top: none;
+      box-shadow: var(--spacing-small) var(--spacing-small) var(--spacing-small) rgba(0, 0, 0, 0.2);
       flex-direction: column;
-      
-      &:has(a.active) {
-        button {
-          background-color: var(--button-nav-active);
-        }
-      }
-      
-      .dropdown-icon {
-        margin-left: var(--spacing-small);
-      }
-      
-      .content {
-        position: absolute;
-      }
-      
-      ul {
-        /* margin-top: var(--spacing-small); */
-        background-color: var(--page-background-secondary);
-        border-radius: var(--border-radius);
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;     
-        border: 2px solid var(--container-accent);
-        border-top: none;
-        box-shadow: var(--spacing-small) var(--spacing-small) var(--spacing-small) rgba(0, 0, 0, 0.2);
-        
+      padding: var(--spacing-small);
+
+      a, button {
+        margin: 0
       }
     }
   }
@@ -152,6 +160,11 @@ main {
       padding: 1px 2px;
       text-wrap: nowrap;
       border-radius: 2px;
+    }
+    
+    svg {
+      height: var(--text-small);
+      margin-left: 3px;
     }
 
     &:hover {

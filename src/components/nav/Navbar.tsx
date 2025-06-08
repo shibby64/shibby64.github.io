@@ -7,7 +7,7 @@ const Navbar: React.FC = () => {
   return (
     <nav>
       <div className="container">
-        <ul className="nav-list">
+        <ul className="nav-list horizontal">
           {RouteList.map((navItem) => {
             if (navItem.type === "leaf") {
               return <NavItem key={navItem.label} route={navItem.route} label={navItem.label} />;
