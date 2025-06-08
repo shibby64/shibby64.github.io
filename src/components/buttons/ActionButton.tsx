@@ -1,18 +1,21 @@
 import React from "react";
 
-type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+type ButtonProps = {
+  onClick: () => void;
+  buttonClass: "primary" | "secondary" | "warning";
+
+  // generic props
+  id?: string;
+  className?: string;
   children: React.ReactNode;
-  variant?: "primary" | "secondary";
 };
 
-const Button: React.FC<ButtonProps> = ({ children, variant = "primary", ...props }) => {
-  const className = variant === "primary" ? "btn btn-primary" : "btn btn-secondary";
-
+const ActionButton: React.FC<ButtonProps> = (props) => {
   return (
-    <button className={className} {...props}>
-      {children}
+    <button onClick={props.onClick} className={`btn ${props.buttonClass} ${props.className || ""}`} id={props.id}>
+      {props.children}
     </button>
   );
 };
 
-export default Button;
+export default ActionButton;

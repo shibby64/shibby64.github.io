@@ -3,13 +3,14 @@
   --viewport-medium-breakpoint: 640px;
   --viewport-small-breakpoint: 0px;
   
-  --white: #F4F6F3;
-  --grey-100: #BABCB9;
-  --grey-80: #7F817E;
-  --grey-60: #444744;
-  --grey-40: #272A27;
-  --grey-20: #181B18;
-  --black: #090C09;
+  --white: #F6F6F6;
+  --grey-100: #BCBCBC;
+  --grey-80: #818181;
+  --grey-60: #444444;
+  --grey-40: #2A2A2A;
+  --grey-20: #1B1B1B;
+  --black: #0C0C0C;
+
 
   --earth-dark: #1F3E13; /* button */
   --earth-mid: #2D5D1D; /* button */
@@ -42,6 +43,10 @@
   --button-warning-solid: var(--fire-light);
   --button-warning-hover: var(--fire-mid);
   --button-warning-active: var(--fire-dark);
+  
+  --button-nav-solid: var(--earth-mid);
+  --button-nav-hover: var(--grey-60);
+  --button-nav-active: var(--grey-40);
 
   /* Text sizes */
   --text-small: 12px;
@@ -52,7 +57,7 @@
 
   --spacing-small: 6px;
   --spacing-medium: 12px;
-  --spacing-large: 24px;
+  --spacing-large: 18px;
   --spacing-xlarge: 48px;
   
   --border-radius: 6px;
