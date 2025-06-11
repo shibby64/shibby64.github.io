@@ -3,13 +3,23 @@
   --viewport-medium-breakpoint: 640px;
   --viewport-small-breakpoint: 0px;
   
-  --white: #F6F6F6;
+  /* --white: #F6F6F6;
   --grey-100: #BCBCBC;
   --grey-80: #818181;
   --grey-60: #444444;
   --grey-40: #2A2A2A;
   --grey-20: #1B1B1B;
-  --black: #0C0C0C;
+  --grey-0: ;
+  --black: #0C0C0C; */
+  
+    --white: #FFFFFF;
+  --grey-100: #BCC2C8;
+  --grey-80: #848F9A;
+  --grey-60: #49525B;
+  --grey-40: #363D45;
+  --grey-20: #24292D;
+  --grey-0: #121417;
+  --black: #060708;
 
 
   --earth-dark: #1F3E13; /* button */
@@ -47,6 +57,7 @@
   --button-nav-solid: var(--earth-mid);
   --button-nav-hover: var(--grey-60);
   --button-nav-active: var(--grey-40);
+  --button-nav-child-selected: var(--grey-20);
 
   /* Text sizes */
   --text-small: 12px;

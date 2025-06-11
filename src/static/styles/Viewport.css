@@ -13,8 +13,8 @@ body {
   @media(min-width: 0px) and (max-width: 639px) {
     .container {
       max-width: 1200px;
-      padding-left: var(--spacing-medium);
-      padding-right: var(--spacing-medium);
+      padding-left: var(--spacing-large);
+      padding-right: var(--spacing-large);
     }
 
     nav {
@@ -22,23 +22,31 @@ body {
         justify-content: center;
       } 
     }
+    
+    /* .container-collection {
+      flex-wrap: wrap;
+    } */
   }
 
   /* Medium devices (tablets, 640px-999px) */
   @media(min-width: 640px) and (max-width: 999px) {
     .container {
       max-width: unset;
-      padding-left: var(--spacing-medium);
-      padding-right: var(--spacing-medium);
+      padding-left: var(--spacing-large);
+      padding-right: var(--spacing-large);
     }
+    
+    /* .container-collection {
+      flex-wrap: wrap;
+    } */
   }
 
   /* Large devices (desktops, 1000px+) */
   @media(min-width: 1000px) {
     .container {
       max-width: 1200px;
-      padding-left: var(--spacing-medium);
-      padding-right: var(--spacing-medium);
+      padding-left: var(--spacing-large);
+      padding-right: var(--spacing-large);
     }
   }
 }

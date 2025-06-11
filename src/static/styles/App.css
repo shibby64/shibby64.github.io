@@ -16,6 +16,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     gap: var(--spacing-small);
+    margin: var(--spacing-large) 0px;
     &.horizontal {
       flex-direction: row;
     }
@@ -30,14 +31,12 @@ nav {
     display: flex;
     
     a, button {
-      all: unset;
       
       color: var(--page-text-primary);
       font-size: var(--text-xlarge);
       font-weight: bold;
       text-decoration: none;
       padding: var(--spacing-small) var(--spacing-medium);
-      margin: var(--spacing-small) 0;
       border-radius: var(--border-radius);
       width: 100%;
       
@@ -54,7 +53,7 @@ nav {
       }
       
       &.open {
-        background-color: var(--page-background-secondary);
+        background-color: var(--button-nav-child-selected);
       }
       
       &:hover {
@@ -127,7 +126,7 @@ nav {
 
 /* page layout */
 main {
-  padding-top: var(--spacing-medium);
+  padding-top: var(--spacing-large);
   padding-bottom: var(--spacing-medium);
   background-color: var(--page-background-primary);
   flex: 1 0 0;
@@ -136,20 +135,7 @@ main {
     margin-bottom: var(--spacing-large);
   }
   
-  .content-row {
-    display: flex;
-    /* justify-content: space-around; */
-    flex-wrap: wrap;
-    gap: var(--spacing-large);
-    margin-bottom: var(--spacing-medium);
-    &.two-column {
-      > * {
-        flex: 1 1 45%;
-        min-width: 300px;
-      }
-    }
-  }
-  
+  /* links in main page */
   a {
     text-decoration: none;
     color: var(--off-white);
@@ -158,7 +144,6 @@ main {
       background-color: var(--earth-light);
       /* color: var(--black); */
       padding: 1px 2px;
-      text-wrap: nowrap;
       border-radius: 2px;
     }
     
@@ -169,6 +154,42 @@ main {
 
     &:hover {
       text-decoration: underline;
+    }
+  }
+}
+
+.songs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+  .song-iframe {
+    height: 80px;
+    border-radius: 12px;
+    outline: 2px solid var(--grey-60);
+  }
+}
+
+
+.content-collection {
+  display: flex;
+  gap: var(--spacing-large);
+  flex-wrap: wrap;
+  flex: 1 1;
+  > * {
+    flex: 1 1;
+    min-width: 320px;
+  }
+  
+  &.row {
+    flex-direction: row;
+    > * {
+      height: 100%;
+    }
+  }
+  &.column {
+    flex-direction: column;
+    > * {
+      width: 100%;
     }
   }
 }
@@ -191,6 +212,7 @@ main {
   box-shadow: var(--spacing-small) var(--spacing-small) var(--spacing-small) rgba(0, 0, 0, 0.2);
   width: 100%;
   box-sizing: border-box;
+  height: 100%;
   
   .header {
     background-color: var(--container-secondary);
@@ -287,4 +309,19 @@ footer {
   font-size: var(--text-small);
   position: relative;
   bottom: 0;
+  
+  .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .socials {
+    margin-left: var(--spacing-medium);
+    svg {
+      width: 24px;
+      height: 24px;
+      margin: 0 var(--spacing-small);
+    }
+  }
 }

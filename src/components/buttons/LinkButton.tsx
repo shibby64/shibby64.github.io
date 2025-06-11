@@ -1,9 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router";
 
-type ButtonProps = {
+type LinkButtonProps = {
   linkTo: string;
   buttonClass: "primary" | "secondary" | "warning";
+  openExternal?: boolean;
 
   // generic props
   id?: string;
@@ -11,11 +12,13 @@ type ButtonProps = {
   children: React.ReactNode;
 };
 
-const LinkButton: React.FC<ButtonProps> = (props) => {
+const LinkButton: React.FC<LinkButtonProps> = (props) => {
   let navigate = useNavigate();
   return (
     <button
-      onClick={() => navigate(props.linkTo)}
+      onClick={() => {
+        props.openExternal ? window.open(props.linkTo, "_blank", "rel=noopener noreferrer") : navigate(props.linkTo);
+      }}
       className={`btn ${props.buttonClass} ${props.className || ""}`}
       id={props.id}>
       {props.children}

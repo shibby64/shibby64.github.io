@@ -15,7 +15,7 @@ const TestPage: React.FC = () => {
           </LinkText>
           {" and "}
           <LinkText href="/#/test">This is an emphasized link</LinkText>
-          <div style={{ display: "flex", justifyContent: "center", marginTop: "1rem", gap: "1rem" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", marginTop: "1rem", gap: "1rem" }}>
             <LinkButton buttonClass="primary" linkTo="/test">
               Primary button
             </LinkButton>

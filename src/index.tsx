@@ -7,6 +7,7 @@ import "./static/styles/App.css";
 import "./static/styles/Fonts.css";
 import "./static/styles/Variables.css";
 import "./static/styles/Viewport.css";
+import "./static/styles/ElementOverrides.css";
 
 // Shouldn't need to touch this file unless you want to change the entry point
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
