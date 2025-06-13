@@ -16,7 +16,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     gap: var(--spacing-small);
-    margin: var(--spacing-large) 0px;
+    margin: var(--spacing-medium) 0px;
     &.horizontal {
       flex-direction: row;
     }
@@ -126,13 +126,13 @@ nav {
 
 /* page layout */
 main {
-  padding-top: var(--spacing-large);
+  padding-top: var(--spacing-medium);
   padding-bottom: var(--spacing-medium);
   background-color: var(--page-background-primary);
   flex: 1 0 0;
   
   .title {
-    margin-bottom: var(--spacing-large);
+    padding: var(--spacing-xlarge) !important;
   }
   
   /* links in main page */
@@ -158,21 +158,41 @@ main {
   }
 }
 
-.songs {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-medium);
-  .song-iframe {
-    height: 80px;
-    border-radius: 12px;
-    outline: 2px solid var(--grey-60);
+.gradient-bg {
+  background: linear-gradient(135deg, var(--earth-light), var(--water-light), var(--mystic-light), var(--fire-light));
+  &.animated {
+    background: repeating-linear-gradient(135deg, var(--earth-light), var(--water-light), var(--mystic-light), var(--fire-light), var(--earth-light), var(--water-light));
+    background-size: 500% 500%;
+    animation: gradient 5s linear infinite;
   }
 }
 
+.gradient-text {
+  background: linear-gradient(135deg, var(--earth-light) 0%, var(--water-light) 25%, var(--mystic-light) 66%, var(--fire-light) 100%);
+  width: fit-content;
+  background-clip: text;
+  color: transparent;
+  &.animated {
+    background: linear-gradient(135deg, var(--earth-light), var(--water-light), var(--mystic-light), var(--fire-light), var(--earth-light), var(--water-light));
+    background-size: 500% 100%;
+      background-clip: text;
+
+    animation: gradient 10s linear infinite;
+  }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 100% 100%;
+	}
+}
 
 .content-collection {
   display: flex;
-  gap: var(--spacing-large);
+  gap: var(--spacing-medium);
   flex-wrap: wrap;
   flex: 1 1;
   > * {
@@ -188,9 +208,6 @@ main {
   }
   &.column {
     flex-direction: column;
-    > * {
-      width: 100%;
-    }
   }
 }
 
@@ -273,6 +290,17 @@ main {
     }
     &:active {
       background-color: var(--button-warning-active);
+    }
+  }
+  
+  &.mystic {
+    background: linear-gradient(135deg, var(--water-light), var(--mystic-light), var(--fire-light));
+    background-size: 200% 200%;
+    outline: 1px solid var(--white);
+
+    transition: background-position 0.5s ease;
+    &:hover {
+      background-position: 100% 100%;
     }
   }
 }

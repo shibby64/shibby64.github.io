@@ -3,26 +3,32 @@ import Card from "../../components/containers/Card";
 import data from "./about.json";
 import Embed from "../../components/widgets/Embed";
 import ContentCollection from "../../components/containers/ContentCollection";
-import { FaAccessibleIcon } from "react-icons/fa";
 
 const About: React.FC = () => {
   return (
     <ContentCollection type="column">
       <ContentCollection type="row">
-        <Card headerText="About Me 🧍" id="about-me">
-          my name jeff
+        <Card header="About Me" id="about-me">
+          <>
+            <p>
+              {
+                "Hi, I'm Ethan! I'm a web developer based in western Washington. Outside of web dev, I dabble in a whole host of things: powerlifting, photography, and music production just to name a few."
+              }
+            </p>
+            <br />
+            <p>{""}</p>
+          </>
         </Card>
       </ContentCollection>
       <ContentCollection type="row">
-        <Card headerText="Songs In Rotation 🎵">
-          <div className="songs">
-            {data.songs.map((songIFrame) => (
-              <Embed className="song-iframe" innerHTML={songIFrame} />
-            ))}
-          </div>
+        <Card header="Songs In Rotation 🎵">
+          <Embed
+            style={{ height: "470px" }}
+            innerHTML={`<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/11LS1CJ0T90U4seq6fdbPy?utm_source=generator&theme=0" width="100%" height="470" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`}
+          />
         </Card>
         <ContentCollection type="column">
-          <Card headerText="Maxes 🏋️‍♂️">
+          <Card header="Maxes 🏋️‍♂️">
             <ul>
               {data.maxes.map((lift) => (
                 <li>
@@ -31,9 +37,7 @@ const About: React.FC = () => {
               ))}
             </ul>
           </Card>
-          <Card headerText="Socials">
-            <FaAccessibleIcon />
-          </Card>
+          <Card header="Socials">I'll add these later</Card>
         </ContentCollection>
       </ContentCollection>
 

@@ -1,23 +1,30 @@
 import React from "react";
 import Tile from "../../components/containers/Tile";
 import LinkButton from "../../components/buttons/LinkButton";
+import ContentCollection from "../../components/containers/ContentCollection";
+import Text from "../../components/Text";
+import Card from "../../components/containers/Card";
 
 const Home: React.FC = () => {
   return (
     <>
-      <section className="content-row">
-        <Tile>
-          <div className="text-section-header">Welcome!</div>
-          <div className="text-body">
-            There isn't much here yet, but feel free to check out my blog!
+      <ContentCollection type="column">
+        <ContentCollection type="row">
+          <Tile className="title gradient-bg animated">
+            <Text textType="title">Welcome!</Text>
+          </Tile>
+        </ContentCollection>
+        <ContentCollection type="row">
+          <Card header="notice">
+            <Text> There isn't much here yet, but feel free to check out my blog!</Text>
             <div style={{ display: "flex", justifyContent: "center", marginTop: "1rem" }}>
               <LinkButton buttonClass="primary" linkTo="/blog">
                 Take me there
               </LinkButton>
             </div>
-          </div>
-        </Tile>
-      </section>
+          </Card>
+        </ContentCollection>
+      </ContentCollection>
     </>
   );
 };

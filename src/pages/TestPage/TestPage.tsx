@@ -25,6 +25,10 @@ const TestPage: React.FC = () => {
             <LinkButton buttonClass="warning" linkTo="/test">
               Warning button
             </LinkButton>
+
+            <LinkButton buttonClass="mystic" linkTo="/test">
+              Mystic button
+            </LinkButton>
           </div>
         </div>
       </Tile>
@@ -33,12 +37,50 @@ const TestPage: React.FC = () => {
         <div>This is a test tile component with an accent bar.</div>
       </Tile>
 
-      <Card headerText="Card - static">
+      <Card header="Card - static">
         <div>
           This is a test card component. It is used to demonstrate the basic structure of a card component.
           <div style={{ display: "flex", justifyContent: "center", marginTop: "1rem", gap: "1rem" }}></div>
         </div>
       </Card>
+
+      <div
+        style={{
+          display: "flex",
+          height: "150px",
+          borderRadius: 16,
+          overflow: "hidden",
+          outline: "3px solid black",
+          boxShadow: "0 0 18px white",
+        }}>
+        <div style={{ flex: 1, backgroundColor: "var(--black)" }}></div>
+        <div style={{ flex: 1, backgroundColor: "var(--grey-0)" }}></div>
+        <div style={{ flex: 1, backgroundColor: "var(--grey-20)" }}></div>
+        <div style={{ flex: 1, backgroundColor: "var(--grey-40)" }}></div>
+        <div style={{ flex: 1, backgroundColor: "var(--grey-60)" }}></div>
+        <div style={{ flex: 1, backgroundColor: "var(--grey-80)" }}></div>
+        <div style={{ flex: 1, backgroundColor: "var(--grey-100)" }}></div>
+        <div style={{ flex: 1, backgroundColor: "var(--white)" }}></div>
+        <div style={{ flex: 1, backgroundColor: "var(--earth-dark)" }}></div>
+        <div style={{ flex: 1, backgroundColor: "var(--earth-mid)" }}></div>
+        <div style={{ flex: 1, backgroundColor: "var(--earth-light)" }}></div>
+        <div style={{ flex: 1, backgroundColor: "var(--fire-dark)" }}></div>
+        <div style={{ flex: 1, backgroundColor: "var(--fire-mid)" }}></div>
+        <div style={{ flex: 1, backgroundColor: "var(--fire-light)" }}></div>
+        <div style={{ flex: 1, backgroundColor: "var(--mystic-dark)" }}></div>
+        <div style={{ flex: 1, backgroundColor: "var(--mystic-mid)" }}></div>
+        <div style={{ flex: 1, backgroundColor: "var(--mystic-light)" }}></div>
+        <div style={{ flex: 1, backgroundColor: "var(--water-dark)" }}></div>
+        <div style={{ flex: 1, backgroundColor: "var(--water-mid)" }}></div>
+        <div style={{ flex: 1, backgroundColor: "var(--water-light)" }}></div>
+      </div>
+
+      <div
+        style={{
+          width: "100%",
+          height: "150px",
+        }}
+        className="gradient"></div>
 
       {/* <Card headerText="Card - collapsable">
         <div>

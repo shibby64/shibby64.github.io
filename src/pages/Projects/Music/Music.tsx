@@ -10,7 +10,7 @@ const Music: React.FC = () => (
     <div style={{ textAlign: "center", marginTop: "2rem", fontSize: "1.5rem", marginBottom: "20px" }}>
       🚧 Under Construction 🚧
     </div>
-    <Card headerText="Latest track on soundcloud">
+    <Card header="Latest track on soundcloud">
       <Embed innerHTML={latest} />
     </Card>
   </>

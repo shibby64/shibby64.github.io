@@ -5,3 +5,7 @@ a {
 button {
   all: unset;
 }
+
+p {
+  margin: 0;
+}

@@ -13,8 +13,8 @@ body {
   @media(min-width: 0px) and (max-width: 639px) {
     .container {
       max-width: 1200px;
-      padding-left: var(--spacing-large);
-      padding-right: var(--spacing-large);
+      padding-left: var(--spacing-medium);
+      padding-right: var(--spacing-medium);
     }
 
     nav {
@@ -32,8 +32,8 @@ body {
   @media(min-width: 640px) and (max-width: 999px) {
     .container {
       max-width: unset;
-      padding-left: var(--spacing-large);
-      padding-right: var(--spacing-large);
+      padding-left: var(--spacing-medium);
+      padding-right: var(--spacing-medium);
     }
     
     /* .container-collection {
@@ -45,8 +45,8 @@ body {
   @media(min-width: 1000px) {
     .container {
       max-width: 1200px;
-      padding-left: var(--spacing-large);
-      padding-right: var(--spacing-large);
+      padding-left: var(--spacing-medium);
+      padding-right: var(--spacing-medium);
     }
   }
 }

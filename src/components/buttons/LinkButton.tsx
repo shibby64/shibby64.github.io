@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 
 type LinkButtonProps = {
   linkTo: string;
-  buttonClass: "primary" | "secondary" | "warning";
+  buttonClass: "primary" | "secondary" | "warning" | "mystic";
   openExternal?: boolean;
 
   // generic props

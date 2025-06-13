@@ -2,3 +2,4 @@
 - Add generic search/filter control
 - New TTF font??
 - enter 380 code for secret surprise
+- make card element take header as element not string
