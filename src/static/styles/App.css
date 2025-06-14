@@ -173,28 +173,27 @@ main {
       text-decoration: underline;
     }
   }
-}
-
-.gradient-bg {
-  background: linear-gradient(135deg, var(--water-light), var(--mystic-light), var(--fire-light));
-  &.animated {
-    background: linear-gradient(135deg, var(--water-light), var(--mystic-light), var(--fire-light), var(--mystic-light), var(--water-light), var(--mystic-light));
-    background-size: 500% 500%;
-    animation: gradient 8s linear infinite;
+  .gradient-bg {
+    background: linear-gradient(135deg, var(--water-light), var(--mystic-light), var(--fire-light));
+    &.animated {
+      background: linear-gradient(135deg, var(--water-light), var(--mystic-light), var(--fire-light), var(--mystic-light), var(--water-light), var(--mystic-light));
+      background-size: 500% 500%;
+      animation: gradient 8s linear infinite;
+    }
   }
-}
 
-.gradient-text {
-  background: linear-gradient(135deg, var(--water-light), var(--mystic-light), var(--fire-light));
-  width: fit-content;
-  background-clip: text;
-  color: transparent;
-  &.animated {
-    background: linear-gradient(135deg, var(--water-light), var(--mystic-light), var(--fire-light), var(--mystic-light), var(--water-light), var(--mystic-light));
-    background-size: 500% 100%;
+  .gradient-text {
+    background: linear-gradient(135deg, var(--water-light), var(--mystic-light), var(--fire-light));
+    width: fit-content;
     background-clip: text;
+    color: transparent;
+    &.animated {
+      background: linear-gradient(135deg, var(--water-light), var(--mystic-light), var(--fire-light), var(--mystic-light), var(--water-light), var(--mystic-light));
+      background-size: 500% 100%;
+      background-clip: text;
 
-    animation: gradient 10s linear infinite;
+      animation: gradient 10s linear infinite;
+    }
   }
 }
 
@@ -231,12 +230,13 @@ main {
 
 .tile {
   border-radius: var(--border-radius);
-  box-shadow: var(--spacing-small) var(--spacing-small) var(--spacing-small) rgba(0, 0, 0, 0.2);
+  box-shadow: var(--spacing-small) var(--spacing-small) var(--spacing-small) rgba(0, 0, 0, 0.5);
   animation: .5s fadeInUp;
   box-sizing: border-box;
   overflow: hidden;
   .tile-inner {
       background-color: var(--container-primary);
+      background: var(--container-gradient);
       padding: var(--spacing-medium);
   }
 }
@@ -244,7 +244,7 @@ main {
 .card {
   border-radius: var(--border-radius);
   overflow: hidden;
-  box-shadow: var(--spacing-small) var(--spacing-small) var(--spacing-small) rgba(0, 0, 0, 0.2);
+  box-shadow: var(--spacing-small) var(--spacing-small) var(--spacing-small) rgba(0, 0, 0, 0.5);
   width: 100%;
   box-sizing: border-box;
   height: 100%;
@@ -252,12 +252,13 @@ main {
   
   .card-inner {
     background-color: var(--container-primary);
+    background: var(--container-gradient);
     overflow: hidden;;
   }
   .header {
     background-color: var(--container-secondary);
     padding: var(--spacing-medium);
-        box-shadow: 0 1px 6px black;
+    box-shadow: 0 1px 6px black;
 
   }
   .content {
@@ -265,12 +266,12 @@ main {
   }
 }
 
-  .border-accent {
-    border-left: 6px solid var(--container-accent);
-  }
+.border-accent {
+  border-left: 6px solid var(--container-accent);
+}
 
 .btn {
-  box-shadow: var(--spacing-small) var(--spacing-small) var(--spacing-small) rgba(0, 0, 0, 0.2);
+  box-shadow: var(--spacing-small) var(--spacing-small) var(--spacing-small) rgba(0, 0, 0, 0.3);
   font-size: var();
   padding: var(--spacing-medium) var(--spacing-large);
   border-radius: 24px;

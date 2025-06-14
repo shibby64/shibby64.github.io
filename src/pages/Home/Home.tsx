@@ -19,14 +19,18 @@ const Home: React.FC = () => {
         <ContentCollection type="row">
           <ContentCollection type="column">
             <Card header="Notice">
-              <Text>There isn't much here yet, but feel free to check out my blog!</Text>
+              <Text>
+                Welcome to my website! Sorry, there isn't much here yet. Eventually my blog will fill up with some
+                longer-form posts where I shout into the void about whatever's on my mind, but right now it's just a
+                couple test posts. Visit it if you want!
+              </Text>
               <div style={{ display: "flex", justifyContent: "center", marginTop: "var(--spacing-large)" }}>
                 <LinkButton buttonClass="mystic" linkTo="/blog">
                   Take me there <FaArrowRight />
                 </LinkButton>
               </div>
             </Card>
-            <Card header="">
+            <Card header="How it feels to make this website">
               <img
                 src="/assets/images/wall-talking.gif"
                 alt="Blog post illustration"
@@ -35,7 +39,7 @@ const Home: React.FC = () => {
             </Card>
           </ContentCollection>
 
-          <Card header="Songs In Rotation 🎵">
+          <Card header="Songs I'm currently listening to">
             <Embed
               style={{ height: "470px" }}
               innerHTML={`<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/11LS1CJ0T90U4seq6fdbPy?utm_source=generator&theme=0" width="100%" height="470" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`}

@@ -21,7 +21,7 @@ const About: React.FC = () => {
       </ContentCollection>
       <ContentCollection type="row">
         <ContentCollection type="column">
-          <Card header="Maxes 🏋️‍♂️">
+          <Card header="Powerlifting stats">
             <ul>
               {data.maxes.map((lift) => (
                 <li>
