@@ -214,7 +214,8 @@ main {
   flex: 1 1;
   > * {
     flex: 1;
-    max-width: 100%;;
+    max-width: 100%;
+    min-width: 320px;
   }
     
   &.row {
@@ -229,15 +230,14 @@ main {
 }
 
 .tile {
-  background-color: var(--container-primary);
-  padding: var(--spacing-large);
   border-radius: var(--border-radius);
   box-shadow: var(--spacing-small) var(--spacing-small) var(--spacing-small) rgba(0, 0, 0, 0.2);
   animation: .5s fadeInUp;
-
-  &.accentBar {
-  padding: var(--spacing-medium);
-    border-left: 6px solid var(--container-accent);
+  box-sizing: border-box;
+  overflow: hidden;
+  .tile-inner {
+      background-color: var(--container-primary);
+      padding: var(--spacing-medium);
   }
 }
 
@@ -249,19 +249,25 @@ main {
   box-sizing: border-box;
   height: 100%;
   animation: .5s fadeInUp;
-
   
+  .card-inner {
+    background-color: var(--container-primary);
+    overflow: hidden;;
+  }
   .header {
     background-color: var(--container-secondary);
     padding: var(--spacing-medium);
-  border-left: 6px solid var(--container-accent);
+        box-shadow: 0 1px 6px black;
+
   }
   .content {
-    background-color: var(--container-primary);
     padding: var(--spacing-medium);
-  border-left: 6px solid var(--container-accent);
   }
 }
+
+  .border-accent {
+    border-left: 6px solid var(--container-accent);
+  }
 
 .btn {
   box-shadow: var(--spacing-small) var(--spacing-small) var(--spacing-small) rgba(0, 0, 0, 0.2);
@@ -379,6 +385,7 @@ footer {
   font-size: var(--text-small);
   position: relative;
   bottom: 0;
+  border-top: 1px solid var(--container-secondary);
   
   .footer-content {
     display: flex;

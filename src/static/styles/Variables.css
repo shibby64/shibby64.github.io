@@ -38,7 +38,7 @@
   /* Container colors */
   --container-primary: var(--grey-40);
   --container-secondary: var(--grey-20);
-  --container-accent: var(--water-mid);
+  --container-accent: var(--water-light);
   
   /* Button colors */
   --button-primary-solid: var(--water-light);

@@ -10,10 +10,11 @@ interface TileProps {
 }
 
 const Tile: React.FC<TileProps> = (props) => {
-  const classes = ClassBuilder(props.className, "tile", props.showAccentBar ? "accentBar" : "");
+  const classesOuter = ClassBuilder("tile");
+  const classesInner = ClassBuilder(props.className, "tile-inner", props.showAccentBar ? "border-accent" : undefined);
   return (
-    <div className={classes} id={props.id} style={props.style}>
-      {props.children}
+    <div className={classesOuter} id={props.id} style={props.style}>
+      <div className={classesInner}>{props.children}</div>
     </div>
   );
 };

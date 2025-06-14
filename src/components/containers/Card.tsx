@@ -16,8 +16,12 @@ const Card: React.FC<CardProps> = (props) => {
 
   return (
     <div className={classes} style={props.style} id={props.id}>
-      <div className="text-section-header header">{props.header}</div>
-      <div className="text-body content">{props.children}</div>
+      <div className="border-accent">
+        <div className="card-inner">
+          <div className="text-section-header header">{props.header}</div>
+          <div className="text-body content">{props.children}</div>
+        </div>
+      </div>
     </div>
   );
 };

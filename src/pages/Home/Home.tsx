@@ -17,14 +17,24 @@ const Home: React.FC = () => {
           </Tile>
         </ContentCollection>
         <ContentCollection type="row">
-          <Card header="notice">
-            <Text>There isn't much here yet, but feel free to check out my blog!</Text>
-            <div style={{ display: "flex", justifyContent: "center", marginTop: "var(--spacing-large)" }}>
-              <LinkButton buttonClass="mystic" linkTo="/blog">
-                Take me there <FaArrowRight />
-              </LinkButton>
-            </div>
-          </Card>
+          <ContentCollection type="column">
+            <Card header="Notice">
+              <Text>There isn't much here yet, but feel free to check out my blog!</Text>
+              <div style={{ display: "flex", justifyContent: "center", marginTop: "var(--spacing-large)" }}>
+                <LinkButton buttonClass="mystic" linkTo="/blog">
+                  Take me there <FaArrowRight />
+                </LinkButton>
+              </div>
+            </Card>
+            <Card header="">
+              <img
+                src="/assets/images/wall-talking.gif"
+                alt="Blog post illustration"
+                style={{ maxWidth: "400px", height: "auto" }}
+              />
+            </Card>
+          </ContentCollection>
+
           <Card header="Songs In Rotation 🎵">
             <Embed
               style={{ height: "470px" }}
