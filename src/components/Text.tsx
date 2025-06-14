@@ -14,9 +14,9 @@ type TextProps = {
 const Text: React.FC<TextProps> = (props) => {
   const classes = ClassBuilder(props.className, props.textType ? `text-${props.textType}` : "");
   return (
-    <div id={props.id} style={props.style} className={classes}>
+    <span id={props.id} style={props.style} className={classes}>
       {props.children}
-    </div>
+    </span>
   );
 };
 

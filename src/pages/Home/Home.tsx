@@ -16,9 +16,9 @@ const Home: React.FC = () => {
         </ContentCollection>
         <ContentCollection type="row">
           <Card header="notice">
-            <Text> There isn't much here yet, but feel free to check out my blog!</Text>
-            <div style={{ display: "flex", justifyContent: "center", marginTop: "1rem" }}>
-              <LinkButton buttonClass="primary" linkTo="/blog">
+            <Text>There isn't much here yet, but feel free to check out my blog!</Text>
+            <div style={{ display: "flex", justifyContent: "center", marginTop: "var(--spacing-large)" }}>
+              <LinkButton buttonClass="mystic" linkTo="/blog">
                 Take me there
               </LinkButton>
             </div>

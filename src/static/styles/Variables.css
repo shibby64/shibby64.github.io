@@ -11,23 +11,18 @@
   --grey-20: #1e2225;
   --grey-0: #121417;
   --black: #060708;
-
-
-  --earth-dark: #1F3E13; /* button */
-  --earth-mid: #2D5D1D; /* button */
-  --earth-light: #387224; /* button */
   
-  --water-dark: #0d47a1;
-  --water-mid: #1976d2;
-  --water-light: #2196f3;
+  --water-dark: #0060CE;
+  --water-mid: #0070E0;
+  --water-light: #0079E9;
   
-  --fire-dark: #610505;
-  --fire-mid: #880707;
-  --fire-light: #AE0909;
+  --fire-dark: #8B0606;
+  --fire-mid: #9D0707;
+  --fire-light: #AF0808;
   
-  --mystic-dark: #5a189a;
-  --mystic-mid: #7b2cbf;
-  --mystic-light: #9d4edd;
+  --mystic-dark: #610BAD;
+  --mystic-mid: #7710D1;
+  --mystic-light: #8F17F2;
   
   /* Site-wide colors */
   --page-background-primary: var(--black);
@@ -38,12 +33,12 @@
   /* Container colors */
   --container-primary: var(--grey-40);
   --container-secondary: var(--grey-20);
-  --container-accent: var(--earth-mid);
+  --container-accent: var(--water-mid);
   
   /* Button colors */
-  --button-primary-solid: var(--earth-light);
-  --button-primary-hover: var(--earth-mid);
-  --button-primary-active: var(--earth-dark);
+  --button-primary-solid: var(--water-light);
+  --button-primary-hover: var(--water-mid);
+  --button-primary-active: var(--water-dark);
   
   --button-secondary-solid: var(--white);
   --button-secondary-hover: var(--grey-100);
@@ -53,10 +48,10 @@
   --button-warning-hover: var(--fire-mid);
   --button-warning-active: var(--fire-dark);
   
-  --button-nav-solid: var(--earth-mid);
+  --button-nav-solid: var(--water-mid);
   --button-nav-hover: var(--grey-60);
   --button-nav-active: var(--grey-40);
-  --button-nav-child-selected: var(--grey-20);
+  --button-nav-child-selected: var(--grey-40);
 
   /* Text sizes */
   --text-small: 12px;

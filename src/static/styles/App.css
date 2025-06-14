@@ -6,8 +6,8 @@ body {
 }
 
 nav {
-  background-color: var(--page-background-primary);
-  border-bottom: 2px solid var(--container-accent);
+  background-color: var(--page-background-secondary);
+  border-bottom: 2px solid var(--container-secondary);
 
   .nav-list {
     list-style: none;
@@ -50,10 +50,13 @@ nav {
       
       &.active {
         background-color: var(--button-nav-solid);
+        &:hover {
+          background-color: var(--button-nav-solid) !important;
+        }
       }
       
       &.open {
-        background-color: var(--button-nav-child-selected);
+        background-color: var(--button-nav-child-selected) !important;
       }
       
       &:hover {
@@ -126,12 +129,14 @@ nav {
 
 /* page layout */
 main {
-  padding-top: var(--spacing-medium);
-  padding-bottom: var(--spacing-medium);
+  padding-top: var(--spacing-large);
+  padding-bottom: var(--spacing-large);
   background-color: var(--page-background-primary);
   flex: 1 0 0;
   
   .title {
+    display: flex;
+    justify-content: center;;
     padding: var(--spacing-xlarge) !important;
   }
   
@@ -141,7 +146,8 @@ main {
     color: var(--off-white);
 
     &.emphasized {
-      background-color: var(--earth-light);
+      background-color: var(--water-light);
+      font-weight: bold;
       /* color: var(--black); */
       padding: 1px 2px;
       border-radius: 2px;
@@ -159,23 +165,23 @@ main {
 }
 
 .gradient-bg {
-  background: linear-gradient(135deg, var(--earth-light), var(--water-light), var(--mystic-light), var(--fire-light));
+  background: linear-gradient(135deg, var(--water-light), var(--mystic-light), var(--fire-light));
   &.animated {
-    background: repeating-linear-gradient(135deg, var(--earth-light), var(--water-light), var(--mystic-light), var(--fire-light), var(--earth-light), var(--water-light));
+    background: linear-gradient(135deg, var(--water-light), var(--mystic-light), var(--fire-light), var(--mystic-light), var(--water-light), var(--mystic-light));
     background-size: 500% 500%;
-    animation: gradient 5s linear infinite;
+    animation: gradient 8s linear infinite;
   }
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, var(--earth-light) 0%, var(--water-light) 25%, var(--mystic-light) 66%, var(--fire-light) 100%);
+  background: linear-gradient(135deg, var(--water-light), var(--mystic-light), var(--fire-light));
   width: fit-content;
   background-clip: text;
   color: transparent;
   &.animated {
-    background: linear-gradient(135deg, var(--earth-light), var(--water-light), var(--mystic-light), var(--fire-light), var(--earth-light), var(--water-light));
+    background: linear-gradient(135deg, var(--water-light), var(--mystic-light), var(--fire-light), var(--mystic-light), var(--water-light), var(--mystic-light));
     background-size: 500% 100%;
-      background-clip: text;
+    background-clip: text;
 
     animation: gradient 10s linear infinite;
   }
@@ -192,7 +198,7 @@ main {
 
 .content-collection {
   display: flex;
-  gap: var(--spacing-medium);
+  gap: var(--spacing-large);
   flex-wrap: wrap;
   flex: 1 1;
   > * {
@@ -245,19 +251,33 @@ main {
 
 .btn {
   box-shadow: var(--spacing-small) var(--spacing-small) var(--spacing-small) rgba(0, 0, 0, 0.2);
-  padding: var(--spacing-small) var(--spacing-medium);
-  border-radius: var(--border-radius);
+  font-size: var();
+  padding: var(--spacing-medium) var(--spacing-large);
+  border-radius: 24px;
   cursor: pointer;
   font-size: var(--text-medium);
   font-weight: bold;
   border: none;
-      max-width: fit-content;
+  
+  max-width: fit-content;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  
+  transition: all 0.2s ease-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+  
+  &:active {
+    transform: scale(0.95);
+  }
 
   
   &.primary {
     background-color: var(--button-primary-solid);
     color: var(--white);
-    transition: background-color 0.1s ease;
     
     &:hover {
       background-color: var(--button-primary-hover);
@@ -270,7 +290,6 @@ main {
   &.secondary {
     background-color: var(--button-secondary-solid);
     color: var(--black);
-    transition: background-color 0.1s ease;
     
     &:hover {
       background-color: var(--button-secondary-hover);
@@ -283,7 +302,6 @@ main {
   &.warning {
     background-color: var(--button-warning-solid);
     color: var(--white);
-    transition: background-color 0.1s ease;
     
     &:hover {
       background-color: var(--button-warning-hover);
@@ -294,13 +312,19 @@ main {
   }
   
   &.mystic {
-    background: linear-gradient(135deg, var(--water-light), var(--mystic-light), var(--fire-light));
-    background-size: 200% 200%;
+    background: linear-gradient(135deg, var(--water-light), var(--mystic-light), var(--fire-light), var(--mystic-light), var(--water-light), var(--mystic-light));
+    background-size: 500% 500%;
     outline: 1px solid var(--white);
+    
+    animation: gradient 2s linear infinite;
+    animation-play-state: paused;
 
-    transition: background-position 0.5s ease;
     &:hover {
-      background-position: 100% 100%;
+      /* background-position: 100% 100%; */
+      animation-play-state: running;
+    }
+    &:active {
+      animation: gradient 1s linear infinite;
     }
   }
 }
