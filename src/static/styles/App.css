@@ -1,6 +1,6 @@
 body {
   color: var(--page-text-primary);
-  font-family: Verdana, sans-serif;
+  font-family: "Nunito", Verdana, sans-serif;
   padding: 0;
   margin: 0;
 }
@@ -108,14 +108,14 @@ nav {
 
 .text-title {
   font-size: var(--text-title);
-    line-height: calc(var(--text-title) + var(--spacing-small));
+  line-height: calc(var(--text-title) + var(--spacing-small));
 
   font-weight: 800;
 }
 
 .text-section-header {
   font-size: var(--text-xlarge);
-    line-height: calc(var(--text-xlarge) + var(--spacing-small));
+  line-height: calc(var(--text-xlarge) + var(--spacing-small));
 
   font-weight: bold;
 }
@@ -127,6 +127,17 @@ nav {
   font-weight: 300;
 }
 
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 /* page layout */
 main {
   padding-top: var(--spacing-large);
@@ -136,8 +147,8 @@ main {
   
   .title {
     display: flex;
-    justify-content: center;;
-    padding: var(--spacing-xlarge) !important;
+    justify-content: center;
+    flex: 1;
   }
   
   /* links in main page */
@@ -202,10 +213,10 @@ main {
   flex-wrap: wrap;
   flex: 1 1;
   > * {
-    flex: 1 1;
-    min-width: 320px;
+    flex: 1;
+    max-width: 100%;;
   }
-  
+    
   &.row {
     flex-direction: row;
     > * {
@@ -222,6 +233,7 @@ main {
   padding: var(--spacing-large);
   border-radius: var(--border-radius);
   box-shadow: var(--spacing-small) var(--spacing-small) var(--spacing-small) rgba(0, 0, 0, 0.2);
+  animation: .5s fadeInUp;
 
   &.accentBar {
   padding: var(--spacing-medium);
@@ -230,22 +242,24 @@ main {
 }
 
 .card {
-  border-left: 6px solid var(--container-accent);
   border-radius: var(--border-radius);
+  overflow: hidden;
   box-shadow: var(--spacing-small) var(--spacing-small) var(--spacing-small) rgba(0, 0, 0, 0.2);
   width: 100%;
   box-sizing: border-box;
   height: 100%;
+  animation: .5s fadeInUp;
+
   
   .header {
     background-color: var(--container-secondary);
     padding: var(--spacing-medium);
-    border-top-right-radius: var(--border-radius);
+  border-left: 6px solid var(--container-accent);
   }
   .content {
     background-color: var(--container-primary);
     padding: var(--spacing-medium);
-    border-bottom-right-radius: var(--border-radius);
+  border-left: 6px solid var(--container-accent);
   }
 }
 
@@ -264,6 +278,10 @@ main {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
   
   transition: all 0.2s ease-out;
   &:hover {

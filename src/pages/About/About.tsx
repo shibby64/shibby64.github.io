@@ -1,7 +1,6 @@
 import React from "react";
 import Card from "../../components/containers/Card";
 import data from "./about.json";
-import Embed from "../../components/widgets/Embed";
 import ContentCollection from "../../components/containers/ContentCollection";
 
 const About: React.FC = () => {
@@ -21,12 +20,6 @@ const About: React.FC = () => {
         </Card>
       </ContentCollection>
       <ContentCollection type="row">
-        <Card header="Songs In Rotation 🎵">
-          <Embed
-            style={{ height: "470px" }}
-            innerHTML={`<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/11LS1CJ0T90U4seq6fdbPy?utm_source=generator&theme=0" width="100%" height="470" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`}
-          />
-        </Card>
         <ContentCollection type="column">
           <Card header="Maxes 🏋️‍♂️">
             <ul>
