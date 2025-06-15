@@ -1,0 +1,16 @@
+{
+  "maxes": [
+    {
+      "lift": "Squat",
+      "weight": "300lbs (136kg)"
+    },
+    {
+      "lift": "Bench Press",
+      "weight": "210lbs (95kg)"
+    },
+    {
+      "lift": "Deadlift",
+      "weight": "375lbs (170kg)"
+    }
+  ]
+}

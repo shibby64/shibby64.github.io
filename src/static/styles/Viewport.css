@@ -22,6 +22,10 @@ body {
         justify-content: center;
       } 
     }
+    
+    /* .container-collection {
+      flex-wrap: wrap;
+    } */
   }
 
   /* Medium devices (tablets, 640px-999px) */
@@ -31,6 +35,10 @@ body {
       padding-left: var(--spacing-medium);
       padding-right: var(--spacing-medium);
     }
+    
+    /* .container-collection {
+      flex-wrap: wrap;
+    } */
   }
 
   /* Large devices (desktops, 1000px+) */

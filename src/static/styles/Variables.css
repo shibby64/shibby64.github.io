@@ -3,38 +3,48 @@
   --viewport-medium-breakpoint: 640px;
   --viewport-small-breakpoint: 0px;
   
-  --white: #F6F6F6;
-  --grey-100: #BCBCBC;
-  --grey-80: #818181;
-  --grey-60: #444444;
-  --grey-40: #2A2A2A;
-  --grey-20: #1B1B1B;
-  --black: #0C0C0C;
-
-
-  --earth-dark: #1F3E13; /* button */
-  --earth-mid: #2D5D1D; /* button */
-  --earth-light: #387224; /* button */
+  --white: #FFFFFF;
+  --grey-100: #BCC2C8;
+  --grey-90: #A2A9B0;
+  --grey-80: #848F9A;
+  --grey-70: #6D7782;
+  --grey-60: #49525B;
+  --grey-50: #3B424A;
+  --grey-40: #363D45;
+  --grey-30: #2A2E32;
+  --grey-20: #1e2225;
+  --grey-10: #15181B;
+  --grey-0: #121417;
+  --black: #060708;
   
-  --fire-dark: #610505;
-  --fire-mid: #880707;
-  --fire-light: #AE0909;
+  --water-dark: #0060CE;
+  --water-mid: #0070E0;
+  --water-light: #0079E9;
+  
+  --fire-dark: #8B0606;
+  --fire-mid: #9D0707;
+  --fire-light: #AF0808;
+  
+  --mystic-dark: #610BAD;
+  --mystic-mid: #7710D1;
+  --mystic-light: #8F17F2;
   
   /* Site-wide colors */
-  --page-background-primary: var(--black);
-  --page-background-secondary: var(--grey-20);
+  --page-background-primary: var(--grey-0);
+  --page-background-secondary: var(--grey-10);
   
   --page-text-primary: var(--white);
   
   /* Container colors */
   --container-primary: var(--grey-40);
   --container-secondary: var(--grey-20);
-  --container-accent: var(--earth-mid);
+  --container-gradient: linear-gradient(170deg, var(--grey-40), var(--grey-30));
+  --container-accent: var(--water-mid);
   
   /* Button colors */
-  --button-primary-solid: var(--earth-light);
-  --button-primary-hover: var(--earth-mid);
-  --button-primary-active: var(--earth-dark);
+  --button-primary-solid: var(--water-light);
+  --button-primary-hover: var(--water-mid);
+  --button-primary-active: var(--water-dark);
   
   --button-secondary-solid: var(--white);
   --button-secondary-hover: var(--grey-100);
@@ -44,9 +54,10 @@
   --button-warning-hover: var(--fire-mid);
   --button-warning-active: var(--fire-dark);
   
-  --button-nav-solid: var(--earth-mid);
+  --button-nav-solid: var(--water-mid);
   --button-nav-hover: var(--grey-60);
   --button-nav-active: var(--grey-40);
+  --button-nav-child-selected: var(--grey-40);
 
   /* Text sizes */
   --text-small: 12px;
@@ -60,6 +71,6 @@
   --spacing-large: 18px;
   --spacing-xlarge: 48px;
   
-  --border-radius: 6px;
+  --border-radius: 12px;
   
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import ClassBuilder from "../../lib/ClassBuilder";
 
 interface TileProps {
   className?: string;
@@ -8,10 +9,14 @@ interface TileProps {
   id?: string;
 }
 
-const Tile: React.FC<TileProps> = ({ children, showAccentBar, className = "", style, id }) => {
+const Tile: React.FC<TileProps> = (props) => {
+  const classesOuter = ClassBuilder("tile");
+  const classesInner = ClassBuilder(props.className, "tile-inner", props.showAccentBar ? "border-accent" : undefined);
   return (
-    <div className={`tile ${showAccentBar && "accentBar"} ${className}`} id={id} style={style}>
-      {children}
+    <div className={classesOuter} id={props.id}>
+      <div className={classesInner} style={props.style}>
+        {props.children}
+      </div>
     </div>
   );
 };

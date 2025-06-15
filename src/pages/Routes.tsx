@@ -14,6 +14,7 @@ export type RouteLeaf = {
   label: string;
   route: string;
   component: React.ReactNode;
+  hidden?: boolean;
 };
 
 export type RouteBranch = {
@@ -21,6 +22,7 @@ export type RouteBranch = {
   label: string;
   route: string;
   component?: React.ReactNode; // if component is supplied, navbar button will take you there. Otherwise, navbar will render a dropdown
+  hidden?: boolean;
   leaves: RouteLeaf[];
 };
 
@@ -54,7 +56,7 @@ const RouteList: Routes[] = [
     ],
   },
   { type: "leaf", label: "About", route: "/about", component: <About /> },
-  { type: "leaf", label: "Test", route: "/test", component: <TestPage /> },
+  { type: "leaf", label: "Test", route: "/test", component: <TestPage />, hidden: true },
 ];
 
 export default RouteList;

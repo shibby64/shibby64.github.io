@@ -1,14 +1,38 @@
 import React from "react";
 import Card from "../../components/containers/Card";
+import data from "./about.json";
+import ContentCollection from "../../components/containers/ContentCollection";
 
 const About: React.FC = () => {
   return (
-    <>
-      <div className="content-row" id="about">
-        <Card headerText="About me" id="about-me">
-          my name jeff
+    <ContentCollection type="column">
+      <ContentCollection type="row">
+        <Card header="About Me" id="about-me">
+          <>
+            <p>
+              {
+                "Hi, I'm Ethan! I'm a web developer based in western Washington. Outside of web dev, I dabble in a whole host of things: powerlifting, photography, and music production just to name a few."
+              }
+            </p>
+            <br />
+            <p>{""}</p>
+          </>
         </Card>
-      </div>
+      </ContentCollection>
+      <ContentCollection type="row">
+        <ContentCollection type="column">
+          <Card header="Powerlifting stats">
+            <ul>
+              {data.maxes.map((lift) => (
+                <li>
+                  {lift.lift}: {lift.weight}
+                </li>
+              ))}
+            </ul>
+          </Card>
+          <Card header="Socials">I'll add these later</Card>
+        </ContentCollection>
+      </ContentCollection>
 
       {/* <Card id="explanation" headerText="Why this site exists">
         The internet is not what i remember it being. Instead of being a place for benefit of the user, it's becoming a
@@ -26,7 +50,7 @@ const About: React.FC = () => {
         is alive and well. {}
         <b>I do not wish to engage with this "new internet" and have been working to unplug myself.</b>
       </Card> */}
-    </>
+    </ContentCollection>
   );
 };
 

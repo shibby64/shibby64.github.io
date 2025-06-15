@@ -1,7 +1,8 @@
 import React from "react";
+import ClassBuilder from "../../lib/ClassBuilder";
 
 interface CardProps {
-  headerText: string;
+  header: React.ReactNode;
   children: React.ReactNode;
 
   // Optional props for additional customization
@@ -10,11 +11,17 @@ interface CardProps {
   style?: React.CSSProperties;
 }
 
-const Card: React.FC<CardProps> = ({ headerText, children, className = "", style, id }) => {
+const Card: React.FC<CardProps> = (props) => {
+  const classes = ClassBuilder(props.className, "card");
+
   return (
-    <div className={`card ${className}`} style={style} id={id}>
-      <div className="text-section-header header">{headerText}</div>
-      <div className="text-body content">{children}</div>
+    <div className={classes} style={props.style} id={props.id}>
+      <div className="border-accent">
+        <div className="card-inner">
+          <div className="text-section-header header">{props.header}</div>
+          <div className="text-body content">{props.children}</div>
+        </div>
+      </div>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React from "react";
 
-type ButtonProps = {
+type ActionButtonProps = {
   onClick: () => void;
   buttonClass: "primary" | "secondary" | "warning";
 
@@ -10,7 +10,7 @@ type ButtonProps = {
   children: React.ReactNode;
 };
 
-const ActionButton: React.FC<ButtonProps> = (props) => {
+const ActionButton: React.FC<ActionButtonProps> = (props) => {
   return (
     <button onClick={props.onClick} className={`btn ${props.buttonClass} ${props.className || ""}`} id={props.id}>
       {props.children}

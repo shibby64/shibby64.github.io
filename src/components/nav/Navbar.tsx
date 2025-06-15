@@ -9,6 +9,10 @@ const Navbar: React.FC = () => {
       <div className="container">
         <ul className="nav-list horizontal">
           {RouteList.map((navItem) => {
+            if (navItem.hidden) {
+              return null;
+            }
+
             if (navItem.type === "leaf") {
               return <NavItem key={navItem.label} route={navItem.route} label={navItem.label} />;
             } else if (navItem.type === "branch" && !navItem.component) {

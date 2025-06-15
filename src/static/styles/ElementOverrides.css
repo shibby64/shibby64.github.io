@@ -1,0 +1,11 @@
+a {
+  color: inherit;
+}
+
+button {
+  all: unset;
+}
+
+p {
+  margin: 0;
+}
