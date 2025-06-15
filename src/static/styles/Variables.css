@@ -39,7 +39,7 @@
   --container-primary: var(--grey-40);
   --container-secondary: var(--grey-20);
   --container-gradient: linear-gradient(170deg, var(--grey-40), var(--grey-30));
-  --container-accent: var(--water-light);
+  --container-accent: var(--water-mid);
   
   /* Button colors */
   --button-primary-solid: var(--water-light);

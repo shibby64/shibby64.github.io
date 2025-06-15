@@ -12,8 +12,10 @@ const Home: React.FC = () => {
     <>
       <ContentCollection type="column">
         <ContentCollection type="row">
-          <Tile className="title gradient-bg animated">
-            <Text textType="title">Hello!</Text>
+          <Tile className="title">
+            <Text textType="title" style={{ color: "var(--white)", textShadow: "3px 3px 6px rgba(0, 0, 0, 0.5)" }}>
+              Hello!
+            </Text>
           </Tile>
         </ContentCollection>
         <ContentCollection type="row">
@@ -30,7 +32,7 @@ const Home: React.FC = () => {
                 </LinkButton>
               </div>
             </Card>
-            <Card header="How it feels to make this website">
+            <Card header="How it feels to post on this website">
               <img
                 src="/assets/images/wall-talking.gif"
                 alt="Blog post illustration"
