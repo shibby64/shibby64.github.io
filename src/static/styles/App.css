@@ -93,7 +93,7 @@ nav {
       border-radius: var(--border-radius);
       border-top-left-radius: 0;
       border-top-right-radius: 0;     
-      border: 2px solid var(--container-accent);
+      border: 2px solid var(--container-secondary);
       border-top: none;
       box-shadow: var(--spacing-small) var(--spacing-small) var(--spacing-small) rgba(0, 0, 0, 0.2);
       flex-direction: column;

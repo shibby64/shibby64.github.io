@@ -26,7 +26,7 @@ const Home: React.FC = () => {
                 longer-form posts where I shout into the void about whatever's on my mind, but right now it's just a
                 couple test posts. Visit it if you want!
               </Text>
-              <div style={{ display: "flex", justifyContent: "center", marginTop: "var(--spacing-large)" }}>
+              <div style={{ display: "flex", justifyContent: "center", padding: "var(--spacing-large)" }}>
                 <LinkButton buttonClass="mystic" linkTo="/blog">
                   Take me there <FaArrowRight />
                 </LinkButton>
@@ -36,7 +36,7 @@ const Home: React.FC = () => {
               <img
                 src="/assets/images/wall-talking.gif"
                 alt="Blog post illustration"
-                style={{ maxWidth: "400px", height: "auto" }}
+                style={{ maxWidth: "100%", maxHeight: "100%" }}
               />
             </Card>
           </ContentCollection>
